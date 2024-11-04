@@ -1,14 +1,6 @@
-# Spring Commerce
+# Dim Dim
 
 A powerful eCommerce platform built with Angular 18 for the front end and Spring Boot for the backend. This application provides a seamless shopping experience with robust features.
-
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -19,13 +11,32 @@ A powerful eCommerce platform built with Angular 18 for the front end and Spring
 - Secure payment integration
 - Scalable architecture for future enhancements
 
-## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/spring-commerce.git
+## Installation and usage
+
+Use the package manager `npm` or `yarn`
+
+1. Clone the Repo
+```bash
+git clone https://github.com/Ashjha75/SpringCommerce-UI
 ```
 2. Navigate to the project directory:
-   ```bash
-   cd spring-commerce
+```bash
+   cd dim-dim
 ```
+3. Install the dependencies:
+```bash
+   npm install 
+```
+4. Run the project
+```bash
+npm start or ng serve
+```
+5. Open the browser and navigate to `http://localhost:4200/`
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+
