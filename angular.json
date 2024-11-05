@@ -16,7 +16,6 @@
             "outputPath": "dist/spring-commerce",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "baseHref": "https://ashjha75.github.io/SpringCommerce-UI/",
             "polyfills": [
               "zone.js"
             ],
@@ -24,7 +23,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "/assets/"
               }
             ],
             "styles": [
@@ -47,12 +47,14 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "https://ashjha75.github.io/SpringCommerce-UI/"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "baseHref": "/"
             }
           },
           "defaultConfiguration": "production"
@@ -91,6 +93,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
