@@ -16,6 +16,7 @@
             "outputPath": "dist/spring-commerce",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "https://ashjha75.github.io/SpringCommerce-UI/",
             "polyfills": [
               "zone.js"
             ],
