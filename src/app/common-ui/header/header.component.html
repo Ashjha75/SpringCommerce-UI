@@ -11,7 +11,7 @@
       <ul class="flex space-x-6 text-md">
         <li class="relative" (mouseenter)="showDropdown()" (mouseleave)="hideDropdown()">
           <a href="#" class="nav-link text-gray-400 hover:text-secondary">Categories</a>
-          <div class="absolute bg-primary text-white mt-1 rounded-md shadow-lg w-48 border-[0.2px] border-outline"
+          <div class="absolute z-50 glass-bg text-white mt-1 rounded-md shadow-lg w-48 border-[0.2px] border-outline"
                [class.hidden]="!dropdownVisible">
             <a href="/category1" class="block px-4 py-2 hover:bg-highlight">Category 1</a>
             <a href="/category2" class="block px-4 py-2 hover:bg-highlight">Category 2</a>

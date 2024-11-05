@@ -25,12 +25,13 @@ export class AppComponent {
     showTitle: true,
     showDescription: true,
     showImage: true,
-    extraCssClasses: 'custom-css-class'
+    extraCssClasses: 'w-fit p-2 mt-7 mb-2 ',
+    imgcss: 'w-[15rem] h-[20rem]'
   };
 
   cardData = {
-    title: 'Sample Card Title',
-    description: 'This is a sample description for the card.',
+    // title: 'Sample Card Title',
+    // description: 'This is a sample description for the card.',
     imageUrl: 'assets/img/cardProduct1.jpg'
   };
 }

@@ -14,6 +14,7 @@ export class CardComponent {
     showDescription?: boolean;
     showImage?: boolean;
     extraCssClasses?: string;
+    imgcss?: string;
   } = {};
 
   @Input() data: {
