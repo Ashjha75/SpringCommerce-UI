@@ -1,0 +1,11 @@
+<div [ngClass]="settings.extraCssClasses" class="border rounded-lg shadow-lg p-4">
+  <div *ngIf="settings.showImage" class="mb-4">
+    <img [src]="data.imageUrl" alt="Card image" class="w-full h-auto rounded-lg">
+  </div>
+  <div *ngIf="settings.showTitle" class="mb-2">
+    <h2 class="text-xl font-bold">{{ data.title }}</h2>
+  </div>
+  <div *ngIf="settings.showDescription">
+    <p class="text-gray-700">{{ data.description }}</p>
+  </div>
+</div>

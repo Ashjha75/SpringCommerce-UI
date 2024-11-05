@@ -14,7 +14,10 @@
 
 <main class="main bg-primary min-h-full min-w-full">
   <app-card-slider [offers]="offers"></app-card-slider>
-  <app-card [settings]="cardSettings" [data]="cardData"></app-card>
+  <section class="">
+    <strong class="text-2xl text-secondary">Shop By Category</strong>
+    <app-card [settings]="cardSettings" [data]="cardData"></app-card>
+  </section>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
