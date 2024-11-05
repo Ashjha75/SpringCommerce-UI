@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private placeholderOptions: string[] = ['Search for products', 'Search for kurtti', 'Search for jeans', 'Search for brands', 'Search for anything'];
   private placeholderIndex: number = 0;
   private intervalId: any;
+  dropdownVisible: boolean = false;
 
   ngOnInit(): void {
     this.intervalId = setInterval(() => {
@@ -23,5 +24,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
     if (this.intervalId) {
       clearInterval(this.intervalId);
     }
+  }
+
+  showDropdown(): void {
+    this.dropdownVisible = true;
+  }
+
+  hideDropdown(): void {
+    this.dropdownVisible = false;
   }
 }

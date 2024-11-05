@@ -9,6 +9,8 @@ module.exports = {
         accent: '#F59E0B', // Amber
         neutral: '#9b9b9b', // Slate
         base: '#F3F4F6', // Gray
+        outline: '#404040',  // Dark Gray
+        highlight: '#2563eb', // Blue
       },
       spacing: {
         '128': '32rem',

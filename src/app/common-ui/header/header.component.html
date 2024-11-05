@@ -9,9 +9,9 @@
     <!-- Navigation Section -->
     <nav>
       <ul class="flex space-x-6 text-lg">
-        <li class="relative group">
+        <li class="relative" (mouseenter)="showDropdown()" (mouseleave)="hideDropdown()">
           <a href="#" class="hover:underline text-secondary">Categories</a>
-          <div class="absolute hidden group-hover:block bg-primary text-white mt-2 rounded-md shadow-lg w-48">
+          <div class="absolute bg-primary text-white mt-2 rounded-md shadow-lg w-48" [class.hidden]="!dropdownVisible">
             <a href="/category1" class="block px-4 py-2 hover:bg-secondary">Category 1</a>
             <a href="/category2" class="block px-4 py-2 hover:bg-secondary">Category 2</a>
             <a href="/category3" class="block px-4 py-2 hover:bg-secondary">Category 3</a>
@@ -24,11 +24,26 @@
     </nav>
 
     <!-- Search Section -->
-    <div class="relative w-1/3">
-      <input type="text" class="w-full bg-primary text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#525252]" [placeholder]="searchPlaceholder">
+    <div class="relative w-1/3 border-[0.1px] rounded-md border-outline">
+      <input type="text"
+             class="w-full bg-primary text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#525252]"
+             [placeholder]="searchPlaceholder">
       <button class="absolute right-2 top-2 text-gray-500 hover:text-gray-700">
         <i class="fas fa-search text-secondary"></i>
       </button>
+    </div>
+
+    <!-- Icons Section -->
+    <div class="flex space-x-4">
+      <a href="/cart"
+         class="relative text-gray-500 hover:text-gray-700 border-[0.1px] border-outline rounded-md py-2 px-3">
+        <i class="fas fa-shopping-cart text-secondary"></i>
+        <span class="absolute -top-2 -right-1.5 bg-[#2563eb] text-white text-xs rounded-full px-1.5 py-0.5">9+</span>
+      </a>
+      <a href="/profile" class=" relative text-gray-500 hover:text-gray-700 border-[0.1px] border-outline rounded-md py-2 px-3">
+        <i class="fas fa-user text-secondary"></i>
+        <span class="absolute -top-1 -right-1.5 bg-[#2563eb] text-white text-xs rounded-full px-1 py-1"></span>
+      </a>
     </div>
   </div>
 </header>

@@ -1,0 +1,5 @@
+<div [@slideInOut]="sidebarState" class="sidebar" [ngClass]="direction">
+  <ng-container *ngIf="content">
+    <ng-container *ngComponentOutlet="content"></ng-container>
+  </ng-container>
+</div>
