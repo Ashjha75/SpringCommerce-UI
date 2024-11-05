@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CommonUiRoutingModule } from './common-ui-routing.module';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {CommonUiRoutingModule} from './common-ui-routing.module';
 import {SidebarComponent} from './sidebar/sidebar.component';
+import {CardComponent} from './card/card.component';
 
 
 @NgModule({
@@ -9,7 +10,9 @@ import {SidebarComponent} from './sidebar/sidebar.component';
   imports: [
     CommonModule,
     CommonUiRoutingModule,
-    SidebarComponent
+    SidebarComponent,
+    CardComponent
   ]
 })
-export class CommonUiModule { }
+export class CommonUiModule {
+}
