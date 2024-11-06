@@ -4,7 +4,7 @@
       <img [src]="offer.image" alt="Offer" class="w-full h-96 object-cover">
     </div>
   </div>
-  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 glass-bg p-4 rounded-4xl">
     <div *ngFor="let offer of offers; let i = index"
          class="w-2 h-2 rounded-full"
          [class.bg-blue-500]="currentIndex === i"

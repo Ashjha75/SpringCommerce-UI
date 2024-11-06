@@ -13,13 +13,17 @@ export class CardComponent {
     showTitle?: boolean;
     showDescription?: boolean;
     showImage?: boolean;
+    showPrice?: boolean;
     extraCssClasses?: string;
     imgcss?: string;
+    titlecss?: string;
   } = {};
 
   @Input() data: {
     title?: string;
     description?: string;
     imageUrl?: string;
+    name?: string;
+    price?: string;
   } = {};
 }

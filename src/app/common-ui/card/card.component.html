@@ -1,15 +1,15 @@
 <div [ngClass]="settings.extraCssClasses" class="border-[0.2px] relative rounded-lg shadow-lg p-2 hover:border-[0.3px] hover:border-gray-400 border-[#525252]">
   <div *ngIf="settings.showImage" class="mb-4">
-    <img [src]="data.imageUrl" alt="Card image" class=" rounded-lg" [ngClass]="settings.imgcss">
+    <img [src]="data.imageUrl" alt="Card image"  [ngClass]="settings.imgcss">
   </div>
-  <div *ngIf="settings.showTitle" class="mb-2">
+  <div *ngIf="settings.showTitle" class="mb-2" [ngClass]="settings.titlecss">
     <h2 class="text-xl font-bold">{{ data.title }}</h2>
   </div>
   <div *ngIf="settings.showDescription">
     <p class="text-gray-700">{{ data.description }}</p>
   </div>
-  <div class="mt-4 p-2  flex justify-center items-center gap-2 glass-bg w-fit px-4 ml-[3px]  absolute bottom-10 rounded-[2.5rem]">
-    <p class=" font-semibold text-secondary  text-xs">Jackets</p>
-    <p class="text-xs  bg-highlight text-secondary p-1 px-3 rounded-4xl">$1200.98</p>
+  <div *ngIf="settings.showPrice" class="hover-box mt-4 p-2 flex justify-center items-center gap-2 glass-bg w-fit px-4 ml-[3px] absolute bottom-10 rounded-[2.5rem]">
+    <p class="font-semibold text-secondary text-xs">{{ data.name }} from</p>
+    <p class="text-xs bg-highlight text-secondary p-1 px-3 rounded-4xl">₹ {{ data.price }}</p>
   </div>
 </div>
