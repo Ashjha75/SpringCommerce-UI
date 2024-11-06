@@ -28,15 +28,15 @@ export class AppComponent {
     showImage: true,
     showPrice: true,
     extraCssClasses: 'w-fit p-2 mt-7 mb-2 ',
-    imgcss: 'w-[15rem] h-[20rem] rounded-lg'
+    imgcss: 'w-[18rem] h-[18rem] rounded-lg'
   };
   cartCardSettings = {
     showTitle: true,
     showDescription: false,
     showImage: true,
     showPrice: false,
-    extraCssClasses: 'w-fit p-2 mt-7 mb-2 ',
-    imgcss: 'w-[10rem] h-[10rem] rounded-lg'
+    extraCssClasses: 'w-fit p-2 mt-7 mb-2 card-background',
+    imgcss: 'w-[10rem] h-[10rem] rounded-lg card-image'
   };
   cardData = [{
     // title: 'Sample Card Title',

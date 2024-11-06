@@ -1,6 +1,6 @@
-<div [ngClass]="settings.extraCssClasses" class="border-[0.2px] relative rounded-lg shadow-lg p-2 hover:border-[0.3px] hover:border-gray-400 border-[#525252]">
-  <div *ngIf="settings.showImage" class="mb-4">
-    <img [src]="data.imageUrl" alt="Card image"  [ngClass]="settings.imgcss">
+<div [ngClass]="settings.extraCssClasses" class="border-[0.2px] card  relative rounded-lg shadow-lg p-2 hover:border-[0.3px] hover:border-gray-400 border-[#525252]">
+  <div *ngIf="settings.showImage" class="mb-4 ">
+    <img [src]="data.imageUrl" alt="Card image " class=" cursor-pointer" [ngClass]="settings.imgcss">
   </div>
   <div *ngIf="settings.showTitle" class="mb-2" [ngClass]="settings.titlecss">
     <h2 class="text-xl font-bold">{{ data.title }}</h2>
