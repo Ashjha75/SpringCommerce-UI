@@ -81,7 +81,7 @@ export class HomeComponent {
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/cardproduct8.png',
       name: 'Sangria',
-      price: '1299'
+      price: '699'
     }
 
   ]
@@ -173,13 +173,7 @@ export class HomeComponent {
       name: 'Sangria',
       price: '1299'
     }
-, {
-      // title: 'Sample Card Title',
-      // description: 'This is a sample description for the card.',
-      imageUrl: 'assets/img/category5.png',
-      name: 'Sangria',
-      price: '1299'
-    }
+
 , {
       // title: 'Sample Card Title',
       // description: 'This is a sample description for the card.',
@@ -221,7 +215,7 @@ export class HomeComponent {
     showArrows: true,
     autoSlide: true,
     slideInterval: 5000,
-    cardsPerSlide: 5
+    cardsPerSlide: 6
   };
 
 }
