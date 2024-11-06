@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {CommonUiRoutingModule} from './common-ui-routing.module';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import {CardComponent} from './card/card.component';
+import {ArrowSliderComponent} from './arrow-slider/arrow-slider.component';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import {CardComponent} from './card/card.component';
     CommonModule,
     CommonUiRoutingModule,
     SidebarComponent,
-    CardComponent
+    CardComponent,
+    ArrowSliderComponent
   ]
 })
 export class CommonUiModule {

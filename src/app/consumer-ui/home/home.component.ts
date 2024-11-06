@@ -3,6 +3,7 @@ import {CardSliderComponent} from '../../common-ui/card-slider/card-slider.compo
 import {CardComponent} from '../../common-ui/card/card.component';
 import {NgForOf} from '@angular/common';
 import {CommonUiModule} from '../../common-ui/common-ui.module';
+import { ArrowSliderComponent } from '../../common-ui/arrow-slider/arrow-slider.component';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,7 @@ import {CommonUiModule} from '../../common-ui/common-ui.module';
     CardComponent,
     NgForOf,
     CommonUiModule,
+    ArrowSliderComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -129,6 +131,97 @@ export class HomeComponent {
       name: 'Sangria',
       price: '1299'
     }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category5.png',
+      name: 'Sangria',
+      price: '1299'
+    }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category5.png',
+      name: 'Sangria',
+      price: '1299'
+    }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category5.png',
+      name: 'Sangria',
+      price: '1299'
+    }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category5.png',
+      name: 'Sangria',
+      price: '1299'
+    }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category5.png',
+      name: 'Sangria',
+      price: '1299'
+    }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category5.png',
+      name: 'Sangria',
+      price: '1299'
+    }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category5.png',
+      name: 'Sangria',
+      price: '1299'
+    }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category5.png',
+      name: 'Sangria',
+      price: '1299'
+    }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category2.png',
+      name: 'Sangria',
+      price: '1299'
+    }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category5.png',
+      name: 'Sangria',
+      price: '1299'
+    }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category1.png',
+      name: 'Sangria',
+      price: '1299'
+    }
+, {
+      // title: 'Sample Card Title',
+      // description: 'This is a sample description for the card.',
+      imageUrl: 'assets/img/category2.png',
+      name: 'Sangria',
+      price: '1299'
+    }
 
   ]
+  sliderSettings = {
+    showArrows: true,
+    autoSlide: true,
+    slideInterval: 5000,
+    cardsPerSlide: 5
+  };
+
 }
