@@ -5,11 +5,12 @@ import {CardSliderComponent} from './common-ui/card-slider/card-slider.component
 import {CommonUiModule} from './common-ui/common-ui.module';
 import {CardComponent} from './common-ui/card/card.component';
 import {NgForOf} from '@angular/common';
+import {HomeComponent} from './consumer-ui/home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, CardSliderComponent, CommonUiModule, CardComponent, NgForOf],
+  imports: [RouterOutlet, HeaderComponent, CardSliderComponent, CommonUiModule, CardComponent, NgForOf, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
