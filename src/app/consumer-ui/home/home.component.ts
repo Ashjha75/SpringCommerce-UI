@@ -71,13 +71,15 @@ export class HomeComponent {
     showArrows: true,
     autoSlide: true,
     slideInterval: 5000,
-    cardsPerSlide: 5
+    cardsPerSlide: 5,
+    slideDir: "horizontal" as "horizontal" | "vertical"
   };
   dealsliderSettings = {
     showArrows: false,
     autoSlide: true,
     slideInterval: 5000,
-    cardsPerSlide: 5
+    cardsPerSlide: 5,
+    slideDir: "vertical" as "horizontal" | "vertical"
   };
   dealSettings = {
     showTitle: false,
@@ -85,7 +87,8 @@ export class HomeComponent {
     showImage: true,
     showPrice: false,
     extraCssClasses: 'w-fit p-2 mt-7 mb-2 card-border',
-    imgcss: 'w-[20rem] h-[18rem] rounded-lg'
+    imgcss: 'w-[20rem] h-[18rem] rounded-lg',
+
   };
 
 

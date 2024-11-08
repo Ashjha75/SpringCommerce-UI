@@ -19,6 +19,7 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
     autoSlide?: boolean;
     slideInterval?: number;
     cardsPerSlide?: number;
+    slideDir?: 'horizontal' | 'vertical';
   } = {};
   @Input() cardTemplate!: TemplateRef<any>;
   currentIndex = 0;
@@ -33,6 +34,7 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
       autoSlide: false,
       slideInterval: 3000,
       cardsPerSlide: 6,
+      slideDir: 'horizontal',
       ...this.settings
     };
 
@@ -54,13 +56,13 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
   }
 
   prevSlide() {
-    this.addAnimationClass('slide-in-right');
+    this.addAnimationClass(this.settings.slideDir == "horizontal" ? 'slide-in-right' : 'slide-in-top');
     this.currentIndex = (this.currentIndex > 0) ? this.currentIndex - 1 : this.getCardBatches().length - 1;
     this.resetAutoSlide();  // Reset auto-slide on manual navigation
   }
 
   nextSlide() {
-    this.addAnimationClass('slide-in-left');
+    this.addAnimationClass(this.settings.slideDir == "horizontal" ? "slide-in-left" : 'slide-in-bottom');
     this.currentIndex = (this.currentIndex < this.getCardBatches().length - 1) ? this.currentIndex + 1 : 0;
     this.resetAutoSlide();  // Reset auto-slide on manual navigation
   }
