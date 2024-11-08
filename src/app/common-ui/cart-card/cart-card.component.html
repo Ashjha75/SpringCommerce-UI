@@ -1,4 +1,4 @@
-<div [ngClass]="defaultSettings.extraCssClasses" class="card relative rounded-lg shadow-lg p-2  "
+<div [ngClass]="defaultSettings.extraCssClasses" class="card relative rounded-lg shadow-lg p-2 mb-16 "
      (click)="onCardClick()">
   <div class="icon-container  top-1 left-2 text-secondary font-bold flex items-center"
        *ngIf="defaultData.offerValue ">
@@ -25,6 +25,6 @@
   <!--    <img src="assets/img/cook.svg" class="w-3 h-3 " [ngClass]="defaultSettings.iconCss">-->
   <!--    <span class="text-secondary font-normal text-xs">{{ defaultData.iconText }}</span>-->
   <!--  </div>-->
-
+  <div class="text-secondary text-xs gap-2 flex justify-start  items-center"><span>$672</span><span class="line-through">$2121</span></div>
   <app-button></app-button>
 </div>
