@@ -51,20 +51,27 @@ export class HomeComponent {
     extraCssClasses: 'w-fit p-2 mt-7 mb-2 card-background card-border',
     imgcss: 'w-[10rem] h-[10rem] rounded-lg card-image'
   };
-  sliderSettings = {
-    showArrows: true,
-    autoSlide: true,
-    slideInterval: 5000,
-    cardsPerSlide: 6
-  };
   foodCardSettings = {
     showTitle: true,
     showDescription: false,
     showImage: true,
     showPrice: false,
     showIcon: true,
-    extraCssClasses: ' mt-7   p-0 w-[10.5rem] h-[15rem] rounded-3xl',
+    extraCssClasses: ' mt-7   p-0 w-[11.5rem] h-[15rem] rounded-3xl',
     imgcss: 'w-[10rem] h-[10rem] rounded-lg card-image ',
     titlecss: 'text-secondary text-sm '
   };
+  sliderSettings = {
+    showArrows: true,
+    autoSlide: true,
+    slideInterval: 4000,
+    cardsPerSlide: 6
+  };
+  foodsliderSettings = {
+    showArrows: true,
+    autoSlide: true,
+    slideInterval: 5000,
+    cardsPerSlide: 5
+  };
+
 }

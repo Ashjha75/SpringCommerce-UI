@@ -19,8 +19,6 @@ export class CardComponent {
     imgcss?: string;
     titlecss?: string;
     iconCss?: string;
-    offerValue?: string,
-
   } = {};
 
   @Input() data: {
@@ -29,6 +27,7 @@ export class CardComponent {
     imageUrl?: string;
     name?: string;
     price?: string;
+    offerValue?: string;
     iconText?: string,
 
   } = {};
@@ -60,4 +59,6 @@ export class CardComponent {
       ...this.data
     };
   }
+
+  protected readonly Number = Number;
 }

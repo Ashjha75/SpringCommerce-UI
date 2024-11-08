@@ -6,15 +6,18 @@
   </div>
 </section>
 <section class=" mt-7 mx-5">
-  <strong class="text-3xl mb-4 text-secondary m-auto w-full ">Categories To Cart </strong>
+  <strong class="text-xl mb-4 text-secondary m-auto w-full ml-10">Categories To Cart </strong>
   <div class="flex justify-center items-center gap-4">
-    <app-arrow-slider [cards]="categoryData" [settings]="sliderSettings" [cardTemplate]="cardTemplate"></app-arrow-slider>
+    <app-arrow-slider [cards]="categoryData" [settings]="sliderSettings"
+                      [cardTemplate]="cardTemplate"></app-arrow-slider>
   </div>
 </section>
 <section class=" mt-7 mx-5">
-<!--  <strong class="text-3xl mb-4 text-secondary m-auto w-full "> </strong>-->
+  <strong class="text-3xl mb-4 text-secondary m-auto w-full ">HOt FOods broo ku nahi le raha hai jab 30 min me hai
+    delivery </strong>
   <div class="flex justify-center items-center gap-4">
-    <app-arrow-slider [cards]="foodData"  [cardTemplate]="foodCardTemplate"></app-arrow-slider>
+    <app-arrow-slider [cards]="foodData" [cardTemplate]="foodCardTemplate"
+                      [settings]="foodsliderSettings"></app-arrow-slider>
   </div>
 </section>
 <ng-template #cardTemplate let-card>

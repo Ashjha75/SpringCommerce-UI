@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, OnDestroy, TemplateRef, ElementRef, Renderer2 } from '@angular/core';
-import { NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
+import {Component, Input, OnInit, OnDestroy, TemplateRef, ElementRef, Renderer2} from '@angular/core';
+import {NgForOf, NgIf, NgTemplateOutlet} from '@angular/common';
 
 @Component({
   selector: 'app-arrow-slider',
@@ -14,22 +14,28 @@ import { NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
 })
 export class ArrowSliderComponent implements OnInit, OnDestroy {
   @Input() cards: any[] = [];
-  @Input() settings: any = {
-    showArrows: true,
-    autoSlide: false,
-    slideInterval: 3000,
-    cardsPerSlide: 6
-  };
-
-
+  @Input() settings: {
+    showArrows?: boolean;
+    autoSlide?: boolean;
+    slideInterval?: number;
+    cardsPerSlide?: number;
+  } = {};
   @Input() cardTemplate!: TemplateRef<any>;
-
   currentIndex = 0;
   intervalId: any;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {
+  }
 
   ngOnInit() {
+    this.settings = {
+      showArrows: false,
+      autoSlide: false,
+      slideInterval: 3000,
+      cardsPerSlide: 6,
+      ...this.settings
+    };
+
     if (this.settings.autoSlide) {
       this.startAutoSlide();
     }
@@ -68,8 +74,9 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
 
   getCardBatches() {
     const batches = [];
-    for (let i = 0; i < this.cards.length; i += this.settings.cardsPerSlide) {
-      batches.push(this.cards.slice(i, i + this.settings.cardsPerSlide));
+    const cardsPerSlide = this.settings.cardsPerSlide ?? 1; // Default to 1 if undefined
+    for (let i = 0; i < this.cards.length; i += cardsPerSlide) {
+      batches.push(this.cards.slice(i, i + cardsPerSlide));
     }
     return batches;
   }

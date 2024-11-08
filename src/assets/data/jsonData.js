@@ -70,12 +70,14 @@ export const foodData = [
     {
         imageUrl: 'assets/img/foods5.jpg',
         title: 'Naan',
-        iconText: "22mins"
+        iconText: "22mins",
+
     },
     {
         imageUrl: 'assets/img/foods2.jpg',
         title: 'Gulab Jamun',
-        iconText: "10mins"
+        iconText: "10mins",
+        offerValue: "20% off"
     },
     {
         imageUrl: 'assets/img/foods3.jpg',
@@ -115,7 +117,8 @@ export const foodData = [
     {
         imageUrl: 'assets/img/foods1.jpg',
         title: 'Rasgulla',
-        iconText: "10mins"
+        iconText: "10mins",
+        offerValue: "10% off"
     },
 
 ];
