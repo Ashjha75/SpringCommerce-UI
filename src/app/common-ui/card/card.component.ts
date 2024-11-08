@@ -14,11 +14,13 @@ export class CardComponent {
     showDescription?: boolean;
     showImage?: boolean;
     showPrice?: boolean;
+    showIcon?: boolean;
     extraCssClasses?: string;
     imgcss?: string;
     titlecss?: string;
+    iconCss?: string;
     offerValue?: string,
-    showOffer?: boolean,
+
   } = {};
 
   @Input() data: {
@@ -27,6 +29,8 @@ export class CardComponent {
     imageUrl?: string;
     name?: string;
     price?: string;
+    iconText?: string,
+
   } = {};
 
   get defaultSettings() {
@@ -35,11 +39,12 @@ export class CardComponent {
       showDescription: false,
       showImage: false,
       showPrice: false,
+      showIcon: false,
       extraCssClasses: '',
       imgcss: '',
       titlecss: '',
+      iconCss: '',
       offerValue: '',
-      showOffer: false,
       ...this.settings
     };
   }
@@ -51,6 +56,7 @@ export class CardComponent {
       imageUrl: '',
       name: '',
       price: '',
+      iconText: '',
       ...this.data
     };
   }
