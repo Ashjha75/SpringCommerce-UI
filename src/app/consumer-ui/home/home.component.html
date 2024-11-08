@@ -1,27 +1,45 @@
 <app-card-slider [offers]="offers"></app-card-slider>
-<section class=" mt-7 mx-5">
-  <strong class="text-3xl mb-4 text-secondary m-auto w-full ">Explore Top Clothing Brands</strong>
-  <div class="flex justify-center items-center gap-4">
-    <app-card *ngFor="let category of cardData" [data]="category" [settings]="cardSettings"></app-card>
-  </div>
-</section>
-<section class=" mt-7 mx-5">
-  <strong class="text-xl mb-4 text-secondary m-auto w-full ml-10">Categories To Cart </strong>
-  <div class="flex justify-center items-center gap-4">
-    <app-arrow-slider [cards]="categoryData" [settings]="sliderSettings"
-                      [cardTemplate]="cardTemplate"></app-arrow-slider>
-  </div>
-</section>
-<section class=" mt-7 mx-5">
-  <strong class="text-3xl mb-4 text-secondary m-auto w-full ">HOt FOods broo ku nahi le raha hai jab 30 min me hai
-    delivery </strong>
-  <div class="flex justify-center items-center gap-4">
-    <app-arrow-slider [cards]="foodData" [cardTemplate]="foodCardTemplate"
-                      [settings]="foodsliderSettings"></app-arrow-slider>
-  </div>
-</section>
+<div>
+  <section class=" mt-7 mx-5">
+    <strong class="text-3xl mb-4 text-secondary m-auto w-full ">Explore Top Clothing Brands</strong>
+    <div class="flex justify-center items-center gap-4">
+      <app-card *ngFor="let category of cardData" [data]="category" [settings]="cardSettings"></app-card>
+    </div>
+  </section>
+  <section class=" mt-7 mx-5">
+    <strong class="text-xl mb-4 text-secondary m-auto w-full ml-12">Categories To Cart </strong>
+    <div class="flex justify-center items-center gap-4">
+      <app-arrow-slider [cards]="categoryData" [settings]="sliderSettings"
+                        [cardTemplate]="cardTemplate"></app-arrow-slider>
+    </div>
+  </section>
+  <section class=" mt-7 mx-5">
+    <strong class="text-xl mb-4 text-secondary m-auto w-full ml-12 ">Hot Foods Delivered in <span
+      class="text-[#ef4372]">30 Mins</span>
+    </strong>
+    <div class="flex justify-center items-center gap-4">
+      <app-arrow-slider [cards]="foodData" [cardTemplate]="foodCardTemplate"
+                        [settings]="foodsliderSettings"></app-arrow-slider>
+    </div>
+  </section>
+
+  <section class=" mt-7 mx-5">
+    <strong class="text-xl mb-4 text-secondary m-auto w-full ml-12 "> <span
+      class="text-[#ef4372]">Deals For You</span>
+    </strong>
+    <div class="flex justify-center items-center gap-4">
+      <app-arrow-slider [cards]="categoryData" [settings]="sliderSettings"
+                        [cardTemplate]="cardTemplate"></app-arrow-slider>
+    </div>
+  </section>
+</div>
+
+
 <ng-template #cardTemplate let-card>
   <app-card [data]="card" [settings]="cartCardSettings"></app-card>
+</ng-template>
+<ng-template #foodCardTemplate let-card>
+  <app-card [data]="card" [settings]="foodCardSettings"></app-card>
 </ng-template>
 <ng-template #foodCardTemplate let-card>
   <app-card [data]="card" [settings]="foodCardSettings"></app-card>

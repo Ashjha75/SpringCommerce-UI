@@ -73,5 +73,11 @@ export class HomeComponent {
     slideInterval: 5000,
     cardsPerSlide: 5
   };
+  dealsliderSettings = {
+    showArrows: false,
+    autoSlide: false,
+    slideInterval: 5000,
+    cardsPerSlide: 5
+  };
 
 }
