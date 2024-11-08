@@ -1,19 +1,19 @@
-<div [ngClass]="settings.extraCssClasses" class="border-[0.2px] card relative rounded-lg shadow-lg p-2 hover:border-[0.3px] hover:border-gray-400 border-[#525252]">
-  <div class="icon-container absolute top-4 left-2 text-secondary font-bold flex items-center">
+<div [ngClass]="defaultSettings.extraCssClasses" class="card relative rounded-lg shadow-lg p-2  ">
+  <div class="icon-container  top-1 left-2 text-secondary font-bold flex items-center" *ngIf="defaultSettings.showOffer">
     <img src="assets/img/saleicon.svg" alt="Icon" class="w-11 h-11">
-    <p class="absolute top-0 text-center font-title text-white px-[4px] pt-[1.75px] text-[0.7rem]" style="width: 36.6667px; line-height: 15px;">29% Off</p>
+    <p class="absolute top-0 text-center font-title text-white px-[4px] pt-[1.75px] text-[0.7rem] " style="font-size: .6rem" >{{defaultSettings.offerValue}}</p>
   </div>
-  <div *ngIf="settings.showImage" class="mb-4">
-    <img [src]="data.imageUrl" alt="Card image" class="cursor-pointer" [ngClass]="settings.imgcss">
+  <div *ngIf="defaultSettings.showImage" class="mb-4">
+    <img [src]="defaultData.imageUrl" alt="Card image" class="cursor-pointer" [ngClass]="defaultSettings.imgcss">
   </div>
-  <div *ngIf="settings.showTitle" class="mb-2" [ngClass]="settings.titlecss">
-    <h2 class="text-xl font-bold">{{ data.title }}</h2>
+  <div *ngIf="defaultSettings.showTitle" class="mb-2" [ngClass]="defaultSettings.titlecss">
+    <h2 class="">{{ defaultData.title }}</h2>
   </div>
-  <div *ngIf="settings.showDescription">
-    <p class="text-gray-700">{{ data.description }}</p>
+  <div *ngIf="defaultSettings.showDescription">
+    <p class="text-gray-700">{{ defaultData.description }}</p>
   </div>
-  <div *ngIf="settings.showPrice" class="hover-box mt-4 p-2 flex justify-center items-center gap-2 glass-bg w-fit px-4 ml-[3px] absolute bottom-10 rounded-[2.5rem]">
-    <p class="font-semibold text-secondary text-xs">{{ data.name }} from</p>
-    <p class="text-xs bg-highlight text-secondary p-1 px-3 rounded-4xl">₹ {{ data.price }}</p>
+  <div *ngIf="defaultSettings.showPrice" class="hover-box mt-4 p-2 flex justify-center items-center gap-2 glass-bg w-fit px-4 ml-[3px] absolute bottom-10 rounded-[2.5rem]">
+    <p class="font-semibold text-secondary text-xs">{{ defaultData.name }} from</p>
+    <p class="text-xs bg-highlight text-secondary p-1 px-3 rounded-4xl">₹ {{ defaultData.price }}</p>
   </div>
 </div>

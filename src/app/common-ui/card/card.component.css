@@ -30,3 +30,10 @@
 .discount-text {
   @apply text-white bg-red-500 rounded-full px-2 py-1 text-xs;
 }
+.card-border{
+  @apply border-[0.3px] border-[#525252]
+}
+
+.card-border:hover{
+  @apply border-gray-400
+}
