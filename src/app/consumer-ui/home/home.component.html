@@ -7,19 +7,17 @@
 </section>
 <section class=" mt-7 mx-5">
   <strong class="text-3xl mb-4 text-secondary m-auto w-full ">Categories To Cart </strong>
+  <!--  <div class="flex justify-center items-center gap-4">-->
+  <!--    <app-arrow-slider [cards]="offers" [settings]="sliderSettings">-->
+  <!--      <app-card *ngFor="let category of categoryData" [data]="category" [settings]="cartCardSettings"></app-card>-->
+  <!--    </app-arrow-slider>-->
+  <!--  </div>-->
+
+
   <div class="flex justify-center items-center gap-4">
     <app-arrow-slider [cards]="categoryData" [settings]="sliderSettings" [cardTemplate]="cardTemplate"></app-arrow-slider>
   </div>
 </section>
-<section class=" mt-7 mx-5">
-<!--  <strong class="text-3xl mb-4 text-secondary m-auto w-full "> </strong>-->
-  <div class="flex justify-center items-center gap-4">
-    <app-arrow-slider [cards]="foodData"  [cardTemplate]="foodCardTemplate"></app-arrow-slider>
-  </div>
-</section>
 <ng-template #cardTemplate let-card>
   <app-card [data]="card" [settings]="cartCardSettings"></app-card>
-</ng-template>
-<ng-template #foodCardTemplate let-card>
-  <app-card [data]="card" [settings]="foodCardSettings"></app-card>
 </ng-template>
