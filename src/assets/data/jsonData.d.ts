@@ -16,10 +16,18 @@ declare module './jsonData.js' {
   export interface Food {
     imageUrl: string;
     title: string;
+    iconText: string;
+    offerValue: string;
+  }
+
+  export interface Features {
+    imageUrl: string;
+    title: string;
     price: string;
   }
 
   export const categoryData: Category[];
   export const cardData: Brands[];
   export const foodData: Food[];
+  export const featuresData: Features[];
 }

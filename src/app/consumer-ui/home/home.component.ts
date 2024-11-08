@@ -7,7 +7,7 @@ import {NgForOf} from '@angular/common';
 import {CommonUiModule} from '../../common-ui/common-ui.module';
 import {ArrowSliderComponent} from '../../common-ui/arrow-slider/arrow-slider.component';
 // @ts-ignore
-import {categoryData, cardData, foodData} from '../../../assets/data/jsonData';
+import {categoryData, cardData, foodData, featuresData} from '../../../assets/data/jsonData';
 
 @Component({
   selector: 'app-home',
@@ -23,10 +23,10 @@ import {categoryData, cardData, foodData} from '../../../assets/data/jsonData';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  title = 'SpringCommerce';
   categoryData = categoryData;
   cardData = cardData;
   foodData = foodData;
+  featuresData = featuresData;
   offers = [
     {image: 'assets/img/offers7.jpg'},
     {image: 'assets/img/offers2.jpg'},
@@ -75,9 +75,16 @@ export class HomeComponent {
   };
   dealsliderSettings = {
     showArrows: false,
-    autoSlide: false,
+    autoSlide: true,
     slideInterval: 5000,
     cardsPerSlide: 5
   };
-
+  dealSettings = {
+    showTitle: false,
+    showDescription: false,
+    showImage: true,
+    showPrice: false,
+    extraCssClasses: 'w-fit p-2 mt-7 mb-2 card-border',
+    imgcss: 'w-[20rem] h-[18rem] rounded-lg'
+  };
 }

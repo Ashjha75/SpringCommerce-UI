@@ -7,14 +7,14 @@
     </div>
   </section>
   <section class=" mt-7 mx-5">
-    <strong class="text-xl mb-4 text-secondary m-auto w-full ml-12">Categories To Cart </strong>
+    <strong class="text-xl mb-4 text-secondary m-auto w-full ml-[12rem]">Categories To Cart </strong>
     <div class="flex justify-center items-center gap-4">
       <app-arrow-slider [cards]="categoryData" [settings]="sliderSettings"
                         [cardTemplate]="cardTemplate"></app-arrow-slider>
     </div>
   </section>
   <section class=" mt-7 mx-5">
-    <strong class="text-xl mb-4 text-secondary m-auto w-full ml-12 ">Hot Foods Delivered in <span
+    <strong class="text-xl mb-4 text-secondary m-auto w-full ml-[12rem] ">Hot Foods Delivered in <span
       class="text-[#ef4372]">30 Mins</span>
     </strong>
     <div class="flex justify-center items-center gap-4">
@@ -24,12 +24,12 @@
   </section>
 
   <section class=" mt-7 mx-5">
-    <strong class="text-xl mb-4 text-secondary m-auto w-full ml-12 "> <span
+    <strong class="text-xl mb-4 text-secondary m-auto w-full ml-[12rem] "> <span
       class="text-[#ef4372]">Deals For You</span>
     </strong>
     <div class="flex justify-center items-center gap-4">
-      <app-arrow-slider [cards]="categoryData" [settings]="sliderSettings"
-                        [cardTemplate]="cardTemplate"></app-arrow-slider>
+      <app-arrow-slider [cards]="featuresData" [settings]="dealsliderSettings"
+                        [cardTemplate]="dealCardTemplate"></app-arrow-slider>
     </div>
   </section>
 </div>
@@ -41,6 +41,6 @@
 <ng-template #foodCardTemplate let-card>
   <app-card [data]="card" [settings]="foodCardSettings"></app-card>
 </ng-template>
-<ng-template #foodCardTemplate let-card>
-  <app-card [data]="card" [settings]="foodCardSettings"></app-card>
+<ng-template #dealCardTemplate let-card>
+  <app-card [data]="card" [settings]="dealSettings"></app-card>
 </ng-template>
