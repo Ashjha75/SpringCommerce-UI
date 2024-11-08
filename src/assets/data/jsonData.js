@@ -241,7 +241,8 @@ export const product1 = [
   {
     id: idCounter++,
     imageUrl: 'assets/img/product1.png',
-    title: 'Baingan Bharta',
+    title: 'Portronics C-Konnect 3-In-1 USB Type C Adapter - White | Type-C + USB + HDMIP0 - Discount.png72% Off\n' +
+      'Portronics C-Konnect 3-In-1 USB Type C Adapter',
     description: "10mins",
     offeredPrice: "₹ 449",
     originalPrice: "₹ 499",
