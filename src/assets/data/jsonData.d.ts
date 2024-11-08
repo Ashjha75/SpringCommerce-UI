@@ -28,8 +28,19 @@ declare module './jsonData.js' {
     price: string;
   }
 
+  export interface Products {
+    id: number;
+    imageUrl: string;
+    title: string,
+    description: string,
+    offeredPrice: string,
+    originalPrice: string,
+    offerValue: string
+  }
+
   export const categoryData: Category[];
   export const cardData: Brands[];
   export const foodData: Food[];
   export const featuresData: Features[];
+  export const product1: Products[];
 }

@@ -7,7 +7,7 @@ import {NgForOf} from '@angular/common';
 import {CommonUiModule} from '../../common-ui/common-ui.module';
 import {ArrowSliderComponent} from '../../common-ui/arrow-slider/arrow-slider.component';
 // @ts-ignore
-import {categoryData, cardData, foodData, featuresData} from '../../../assets/data/jsonData';
+import {categoryData, cardData, foodData, featuresData, product1} from '../../../assets/data/jsonData';
 import {CartCardComponent} from '../../common-ui/cart-card/cart-card.component';
 
 @Component({
@@ -29,6 +29,7 @@ export class HomeComponent {
   cardData = cardData;
   foodData = foodData;
   featuresData = featuresData;
+  product1 = product1;
   offers = [
     {image: 'assets/img/offers7.jpg'},
     {image: 'assets/img/offers2.jpg'},
