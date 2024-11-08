@@ -203,5 +203,102 @@ export const featuresData = [
     imageUrl: 'assets/img/features10.png',
     name: 'Sangria',
     price: '1299'
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/features11.png',
+    name: 'Sangria',
+    price: '1299'
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/features12.png',
+    name: 'Sangria',
+    price: '1299'
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/features13.png',
+    name: 'Sangria',
+    price: '1299'
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/features14.png',
+    name: 'Sangria',
+    price: '1299'
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/features15.png',
+    name: 'Sangria',
+    price: '1299'
+  }
+];
+
+export const product1 = [
+
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/product1.png',
+    title: 'Baingan Bharta',
+    description: "10mins",
+    offeredPrice: "₹ 449",
+    originalPrice: "₹ 499",
+    offerValue: "20% off"
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/product2.png',
+    title: 'Vada pav',
+    description: "10mins",
+    offeredPrice: "₹ 449",
+    originalPrice: "₹ 499",
+    offerValue: "20% off"
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/product3.png',
+    title: 'Palak Paneer',
+    description: "10mins",
+    offeredPrice: "₹ 449",
+    originalPrice: "₹ 499",
+    offerValue: "20% off"
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/product4.png',
+    title: 'Rajma',
+    description: "10mins",
+    offeredPrice: "₹ 449",
+    originalPrice: "₹ 499",
+    offerValue: "20% off"
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/product5.png',
+    title: 'Dhokla',
+    description: "10mins",
+    offeredPrice: "₹ 449",
+    originalPrice: "₹ 499",
+    offerValue: "20% off"
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/product6.png',
+    title: 'Paneer Tikka',
+    description: "10mins",
+    offeredPrice: "₹ 449",
+    originalPrice: "₹ 499",
+    offerValue: "20% off"
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/product6.png',
+    title: 'Rasgulla',
+    description: "10mins",
+    offeredPrice: "₹ 449",
+    originalPrice: "₹ 499",
+    offerValue: "20% off"
   }
 ];
