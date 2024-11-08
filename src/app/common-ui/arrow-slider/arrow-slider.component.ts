@@ -18,8 +18,10 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
     showArrows: true,
     autoSlide: false,
     slideInterval: 3000,
-    cardsPerSlide: 1
+    cardsPerSlide: 6
   };
+
+
   @Input() cardTemplate!: TemplateRef<any>;
 
   currentIndex = 0;
