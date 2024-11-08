@@ -21,4 +21,6 @@ export class CardSliderComponent implements OnInit {
       this.transform = `translateX(-${this.currentIndex * 100}%)`;
     }, 3200);
   }
+
+
 }

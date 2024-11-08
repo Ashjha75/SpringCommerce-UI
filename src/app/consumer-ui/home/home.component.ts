@@ -87,4 +87,11 @@ export class HomeComponent {
     extraCssClasses: 'w-fit p-2 mt-7 mb-2 card-border',
     imgcss: 'w-[20rem] h-[18rem] rounded-lg'
   };
+
+
+//   outputs
+  handleCardClick(cardDetails: any) {
+    console.log('Card clicked:', cardDetails);
+    // Handle the card details as needed
+  }
 }

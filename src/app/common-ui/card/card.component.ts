@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {NgClass, NgIf} from '@angular/common';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-card',
@@ -29,8 +29,9 @@ export class CardComponent {
     price?: string;
     offerValue?: string;
     iconText?: string,
-
   } = {};
+
+  @Output() cardClick = new EventEmitter<any>();
 
   get defaultSettings() {
     return {
@@ -58,6 +59,10 @@ export class CardComponent {
       iconText: '',
       ...this.data
     };
+  }
+
+  onCardClick() {
+    this.cardClick.emit(this.defaultData);
   }
 
   protected readonly Number = Number;

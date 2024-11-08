@@ -1,28 +1,30 @@
-// src/assets/data/jsonData.d.ts
-
 declare module './jsonData.js' {
   export interface Category {
+    id: number;
     imageUrl: string;
     name: string;
     price: string;
   }
 
   export interface Brands {
+    id: number;
     imageUrl: string;
     name: string;
     price: string;
   }
 
   export interface Food {
+    id: number;
     imageUrl: string;
     title: string;
     iconText: string;
-    offerValue: string;
+    offerValue?: string;
   }
 
   export interface Features {
+    id: number;
     imageUrl: string;
-    title: string;
+    name: string;
     price: string;
   }
 
