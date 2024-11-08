@@ -8,6 +8,7 @@ import {CommonUiModule} from '../../common-ui/common-ui.module';
 import {ArrowSliderComponent} from '../../common-ui/arrow-slider/arrow-slider.component';
 // @ts-ignore
 import {categoryData, cardData, foodData, featuresData} from '../../../assets/data/jsonData';
+import {CartCardComponent} from '../../common-ui/cart-card/cart-card.component';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ import {categoryData, cardData, foodData, featuresData} from '../../../assets/da
     NgForOf,
     CommonUiModule,
     ArrowSliderComponent,
+    CartCardComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

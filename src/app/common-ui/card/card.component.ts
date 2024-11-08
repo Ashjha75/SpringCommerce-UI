@@ -65,5 +65,4 @@ export class CardComponent {
     this.cardClick.emit(this.defaultData);
   }
 
-  protected readonly Number = Number;
 }

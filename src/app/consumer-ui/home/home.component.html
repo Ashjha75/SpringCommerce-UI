@@ -33,6 +33,17 @@
                         [cardTemplate]="dealCardTemplate"></app-arrow-slider>
     </div>
   </section>
+
+  <section class=" mt-7 mx-5">
+    <strong class="text-xl mb-4 text-secondary m-auto w-full ml-[12rem] ">Hot Foods Delivered in <span
+      class="text-[#ef4372]">30 Mins</span>
+    </strong>
+    <div class="flex justify-center items-center gap-4">
+      <app-arrow-slider [cards]="foodData" [cardTemplate]="productsCardTemplate"
+                        [settings]="foodsliderSettings"></app-arrow-slider>
+    </div>
+  </section>
+
 </div>
 
 
@@ -44,4 +55,7 @@
 </ng-template>
 <ng-template #dealCardTemplate let-card>
   <app-card [data]="card" [settings]="dealSettings" (cardClick)="handleCardClick($event)"></app-card>
+</ng-template>
+<ng-template #productsCardTemplate let-card>
+  <app-cart-card [data]="card" [settings]="foodCardSettings" (cardClick)="handleCardClick($event)"></app-cart-card>
 </ng-template>
