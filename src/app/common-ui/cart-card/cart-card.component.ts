@@ -1,12 +1,14 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { NgClass, NgIf } from '@angular/common';
+import {ButtonComponent} from '../button/button.component';
 
 @Component({
   selector: 'app-cart-card',
   standalone: true,
   imports: [
     NgIf,
-    NgClass
+    NgClass,
+    ButtonComponent
   ],
   templateUrl: './cart-card.component.html',
   styleUrl: './cart-card.component.css'
