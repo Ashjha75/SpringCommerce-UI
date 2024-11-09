@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { NgClass, NgIf } from '@angular/common';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {DecimalPipe, NgClass, NgIf} from '@angular/common';
 import {ButtonComponent} from '../button/button.component';
 
 @Component({
@@ -8,12 +8,15 @@ import {ButtonComponent} from '../button/button.component';
   imports: [
     NgIf,
     NgClass,
-    ButtonComponent
+    ButtonComponent,
+    DecimalPipe
   ],
   templateUrl: './cart-card.component.html',
   styleUrl: './cart-card.component.css'
 })
 export class CartCardComponent {
+
+  getButtonLabel = "Add to Cart";
   @Input() settings: {
     showTitle?: boolean;
     showDescription?: boolean;
@@ -34,6 +37,7 @@ export class CartCardComponent {
     price?: string;
     offerValue?: string;
     iconText?: string,
+    time?: string
   } = {};
 
   @Output() cardClick = new EventEmitter<any>();
@@ -50,6 +54,7 @@ export class CartCardComponent {
       titlecss: '',
       iconCss: '',
       offerValue: '',
+      time: '',
       ...this.settings
     };
   }

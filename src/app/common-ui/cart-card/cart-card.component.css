@@ -30,6 +30,7 @@
 .discount-text {
   @apply text-white bg-red-500 rounded-full px-2 py-1 text-xs;
 }
+
 .title {
   display: -webkit-box;
   -webkit-line-clamp: 2; /* Limits the text to 2 lines */
@@ -37,4 +38,15 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%; /* Adjust as needed */
+}
+
+.glass-back {
+  background: rgba(45, 49, 51, 0.87);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(51, 50, 50, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid #666f7e;
+  padding: 5px;
+  margin: -5px 5px 7px;
 }
