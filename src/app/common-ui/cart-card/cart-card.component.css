@@ -30,3 +30,11 @@
 .discount-text {
   @apply text-white bg-red-500 rounded-full px-2 py-1 text-xs;
 }
+.title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limits the text to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%; /* Adjust as needed */
+}

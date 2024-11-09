@@ -100,7 +100,7 @@ export class HomeComponent {
     showImage: true,
     showPrice: false,
     showIcon: true,
-    extraCssClasses: ' mt-7   p-0 w-[16.5rem] h-[26rem] rounded-3xl bg-yellow-300',
+    extraCssClasses: ' mt-7   p-0 w-[16.5rem] h-[26rem] rounded-3xl ',
     imgcss: 'w-full h-[12rem] rounded-lg card-image ',
     titlecss: 'text-secondary text-sm '
   };

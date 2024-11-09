@@ -1,5 +1,5 @@
 <div class="slider-container relative flex items-center mx-auto">
-  <button *ngIf="settings.showArrows" class="nav-button left z-20 glass-bg" (click)="prevSlide()"> « </button>
+  <button *ngIf="settings.showArrows" class="nav-button -left-[1px] z-20 glass-bg" (click)="prevSlide()"> « </button>
   <div class="slider flex overflow-hidden w-full">
     <ng-container *ngFor="let cardBatch of getCardBatches(); let i = index">
       <div *ngIf="i === currentIndex" class="w-full flex gap-4 justify-center items-center transition-all duration-500 ease-in-out">

@@ -1,30 +1,33 @@
-<div [ngClass]="defaultSettings.extraCssClasses" class="card relative rounded-lg shadow-lg p-2 mb-16 "
+<div [ngClass]="defaultSettings.extraCssClasses"
+     class="card flex flex-col justify-between relative rounded-lg shadow-lg p-2 mb-16 "
      (click)="onCardClick()">
-  <div class="icon-container  top-1 left-2 text-secondary font-bold flex items-center"
-       *ngIf="defaultData.offerValue ">
-    <img src="assets/img/saleicon.svg" alt="Icon" class="w-10 h-10">
-    <p class="absolute top-0 text-center font-title text-white px-[4px] pt-[1.75px] text-[0.7rem] "
-       style="font-size: .6rem">{{ defaultData.offerValue }}</p>
-  </div>
-  <div *ngIf="defaultSettings.showImage" class="mb-4">
-    <img [src]="defaultData.imageUrl" alt="Card image" class="cursor-pointer" [ngClass]="defaultSettings.imgcss">
-  </div>
-  <div *ngIf="defaultSettings.showTitle" class="mb-2" [ngClass]="defaultSettings.titlecss">
-    <h2 class="">{{ defaultData.title }}</h2>
-  </div>
-  <div *ngIf="defaultSettings.showDescription">
-    <p class="text-gray-700">{{ defaultData.description }}</p>
-  </div>
-  <div class="my-2 text-white">
-    <p class="text-secondary text-sm">1 piece</p>
-  </div>
-  <div *ngIf="defaultSettings.showPrice"
-       class="hover-box mt-4 p-2 flex justify-center items-center gap-2 glass-bg w-fit px-4 ml-[3px] absolute bottom-10 rounded-[2.5rem]">
-    <p class="font-semibold text-secondary text-xs">{{ defaultData.name }} from</p>
-    <p class="text-xs bg-highlight text-secondary p-1 px-3 rounded-4xl ">₹ {{ defaultData.price }}</p>
-  </div>
+  <div>
+    <div class="icon-container  top-1 left-2 text-secondary font-bold flex items-center"
+         *ngIf="defaultData.offerValue ">
+      <img src="assets/img/saleicon.svg" alt="Icon" class="w-10 h-10">
+      <p class="absolute top-0 text-center font-title text-white px-[4px] pt-[1.75px] text-[0.7rem] "
+         style="font-size: .6rem">{{ defaultData.offerValue }}</p>
+    </div>
+    <div *ngIf="defaultSettings.showImage" class="mb-4 border-2 p-[7px] rounded-xl border-[#3d444d] ">
+      <img [src]="defaultData.imageUrl" alt="Card image" class="cursor-pointer" [ngClass]="defaultSettings.imgcss">
+    </div>
+    <div *ngIf="defaultSettings.showTitle" class="mb-2" [ngClass]="defaultSettings.titlecss">
+      <h2 class="title">{{ defaultData.title }}</h2>
+    </div>
+    <div *ngIf="defaultSettings.showDescription">
+      <p class="text-gray-700">{{ defaultData.description }}</p>
+    </div>
+    <div class="my-2 text-white">
+      <p class="text-secondary text-sm">1 piece</p>
+    </div>
+    <div *ngIf="defaultSettings.showPrice"
+         class="hover-box mt-4 p-2 flex justify-center items-center gap-2 glass-bg w-fit px-4 ml-[3px] absolute bottom-10 rounded-[2.5rem]">
+      <p class="font-semibold text-secondary text-xs">{{ defaultData.name }} from</p>
+      <p class="text-xs bg-highlight text-secondary p-1 px-3 rounded-4xl ">₹ {{ defaultData.price }}</p>
+    </div>
 
-  <div class="text-secondary text-xs gap-2 flex justify-start  items-center"><span>$672</span><span
-    class="line-through">$2121</span></div>
+    <div class="text-secondary text-xs gap-2 flex justify-start  items-center"><span>$672</span><span
+      class="line-through">$2121</span></div>
+  </div>
   <app-button></app-button>
 </div>
