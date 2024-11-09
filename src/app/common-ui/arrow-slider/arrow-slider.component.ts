@@ -76,7 +76,7 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
 
   getCardBatches() {
     const batches = [];
-    const cardsPerSlide = this.settings.cardsPerSlide ?? 1; // Default to 1 if undefined
+    const cardsPerSlide = this.settings.cardsPerSlide ?? 1;
     for (let i = 0; i < this.cards.length; i += cardsPerSlide) {
       batches.push(this.cards.slice(i, i + cardsPerSlide));
     }

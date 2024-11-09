@@ -40,7 +40,7 @@
     </strong>
     <div class="flex justify-center items-center gap-4">
       <app-arrow-slider [cards]="product1" [cardTemplate]="productsCardTemplate"
-                        [settings]="foodsliderSettings"></app-arrow-slider>
+                        [settings]="productSliderSettings"></app-arrow-slider>
     </div>
   </section>
 
@@ -57,5 +57,5 @@
   <app-card [data]="card" [settings]="dealSettings" (cardClick)="handleCardClick($event)"></app-card>
 </ng-template>
 <ng-template #productsCardTemplate let-card>
-  <app-cart-card [data]="card" [settings]="foodCardSettings" (cardClick)="handleCardClick($event)"></app-cart-card>
+  <app-cart-card [data]="card" [settings]="productCardSettings" (cardClick)="handleCardClick($event)"></app-cart-card>
 </ng-template>

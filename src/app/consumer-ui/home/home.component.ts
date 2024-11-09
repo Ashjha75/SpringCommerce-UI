@@ -75,7 +75,8 @@ export class HomeComponent {
     autoSlide: true,
     slideInterval: 5000,
     cardsPerSlide: 5,
-    slideDir: "horizontal" as "horizontal" | "vertical"
+    slideDir: "horizontal" as "horizontal" | "vertical",
+    extraCssClasses: 'w-full bg-white',
   };
   dealsliderSettings = {
     showArrows: false,
@@ -93,7 +94,24 @@ export class HomeComponent {
     imgcss: 'w-[20rem] h-[18rem] rounded-lg',
 
   };
-
+  productCardSettings = {
+    showTitle: true,
+    showDescription: false,
+    showImage: true,
+    showPrice: false,
+    showIcon: true,
+    extraCssClasses: ' mt-7   p-0 w-[16.5rem] h-[26rem] rounded-3xl bg-yellow-300',
+    imgcss: 'w-full h-[12rem] rounded-lg card-image ',
+    titlecss: 'text-secondary text-sm '
+  };
+  productSliderSettings = {
+    showArrows: true,
+    autoSlide: true,
+    slideInterval: 5000,
+    cardsPerSlide: 4,
+    slideDir: "horizontal" as "horizontal" | "vertical",
+    extraCssClasses: 'w-full bg-white',
+  };
 
 //   outputs
   handleCardClick(cardDetails: any) {
