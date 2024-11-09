@@ -43,38 +43,38 @@ export const cardData = [
   {
     id: idCounter++,
     imageUrl: 'assets/img/cardproduct7.png',
-    name: 'Nike',
-    price: '1499'
-  },
-  {
-    id: idCounter++,
-    imageUrl: 'assets/img/cardproduct2.jpg',
-    name: 'Adidas',
-    price: '1299'
+    name: 'Skybags',
+    price: '1999'
   },
   {
     id: idCounter++,
     imageUrl: 'assets/img/cardproduct3.jpg',
-    name: 'Puma',
+    name: 'Aldo',
     price: '999'
   },
   {
     id: idCounter++,
-    imageUrl: 'assets/img/cardproduct4.jpg',
-    name: 'Reebok',
-    price: '799'
-  },
-  {
-    id: idCounter++,
     imageUrl: 'assets/img/cardproduct5.jpg',
-    name: 'Under Armour',
-    price: '1199'
+    name: 'Triumph',
+    price: '199'
   },
   {
     id: idCounter++,
-    imageUrl: 'assets/img/cardproduct6.jpg',
-    name: 'New Balance',
-    price: '899'
+    imageUrl: 'assets/img/cardproduct2.jpg',
+    name: 'Calvin Klein',
+    price: '399'
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/cardproduct4.jpg',
+    name: 'US. POLO',
+    price: '699'
+  },
+  {
+    id: idCounter++,
+    imageUrl: 'assets/img/cardproduct8.png',
+    name: 'Sangria',
+    price: '1299'
   }
 ];
 
@@ -241,11 +241,13 @@ export const product1 = [
   {
     id: idCounter++,
     imageUrl: 'assets/img/product1.png',
-    title: 'Baingan Bharta',
+    title: 'Portronics C-Konnect 3-In-1 USB Type C Adapter - White | Type-C + USB + HDMIP0 - Discount.png72% Off\n' +
+      'Portronics C-Konnect 3-In-1 USB Type C Adapter',
     description: "10mins",
     offeredPrice: "₹ 449",
     originalPrice: "₹ 499",
-    offerValue: "20% off"
+    offerValue: 12.5,
+    time: "30mins",
   },
   {
     id: idCounter++,
@@ -254,7 +256,8 @@ export const product1 = [
     description: "10mins",
     offeredPrice: "₹ 449",
     originalPrice: "₹ 499",
-    offerValue: "20% off"
+    offerValue: 15,
+    time: "15mins",
   },
   {
     id: idCounter++,
@@ -263,7 +266,8 @@ export const product1 = [
     description: "10mins",
     offeredPrice: "₹ 449",
     originalPrice: "₹ 499",
-    offerValue: "20% off"
+    offerValue: 4.67,
+    time: "10mins",
   },
   {
     id: idCounter++,
@@ -272,7 +276,8 @@ export const product1 = [
     description: "10mins",
     offeredPrice: "₹ 449",
     originalPrice: "₹ 499",
-    offerValue: "20% off"
+    offerValue: 12.99912,
+    time: "16mins",
   },
   {
     id: idCounter++,
@@ -281,7 +286,8 @@ export const product1 = [
     description: "10mins",
     offeredPrice: "₹ 449",
     originalPrice: "₹ 499",
-    offerValue: "20% off"
+    offerValue: 14.2,
+    time: "20mins",
   },
   {
     id: idCounter++,
@@ -290,15 +296,17 @@ export const product1 = [
     description: "10mins",
     offeredPrice: "₹ 449",
     originalPrice: "₹ 499",
-    offerValue: "20% off"
+    offerValue: 20,
+    time: "10mins",
   },
   {
     id: idCounter++,
     imageUrl: 'assets/img/product6.png',
     title: 'Rasgulla',
     description: "10mins",
-    offeredPrice: "₹ 449",
-    originalPrice: "₹ 499",
-    offerValue: "20% off"
+    offeredPrice: "449",
+    originalPrice: "499",
+    offerValue: 13.4,
+    time: "10mins",
   }
 ];

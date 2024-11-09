@@ -35,7 +35,9 @@ declare module './jsonData.js' {
     description: string,
     offeredPrice: string,
     originalPrice: string,
-    offerValue: string
+    offerValue: string,
+    time: string,
+
   }
 
   export const categoryData: Category[];
