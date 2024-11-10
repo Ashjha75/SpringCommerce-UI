@@ -83,6 +83,6 @@ export class CartCardComponent {
   // Call this method when the user clicks "Add to Cart"
   onCardClick(): void {
     console.log('Product added to cart:', this.defaultData);
-    this.stateService.addProductToCart(this.defaultData);
+    // this.stateService.addProductToCart(this.defaultData);
   }
 }

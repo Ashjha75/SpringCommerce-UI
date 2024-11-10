@@ -1,9 +1,16 @@
-<button
-  class="bg-highlight text-white font-semibold py-2 px-4 rounded-full capitalize"
-  [ngClass]="['btn', 'btn-' + type]"
+<div>
+  <!-- Add to Cart Button (primary type) -->
+  <button *ngIf="type === 'primary'"
+          class="btn btn-primary"
+          (click)="handleClick()">
+    {{ label }}
+  </button>
 
-  (click)="handleClick()"
->
-<!--  <img src="assets/img/saleicon.svg" class="w-4 h-4" alt="img">-->
-  {{ label }}
-</button>
+  <!-- Quantity Adjustment (quantity type) -->
+  <div *ngIf="type === 'secondary'" class="quantity-container">
+    <button class="quantity-btn decrease" (click)="decreaseQuantity()">-</button>
+    <span class="quantity">{{ quantity }}</span>
+    <button class="quantity-btn increase" (click)="increaseQuantity()">+</button>
+  </div>
+</div>
+

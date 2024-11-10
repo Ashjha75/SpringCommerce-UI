@@ -1,16 +1,12 @@
-import {Component, Input, OnInit, OnDestroy, TemplateRef, ElementRef, Renderer2} from '@angular/core';
-import {NgForOf, NgIf, NgTemplateOutlet} from '@angular/common';
+import { Component, Input, OnInit, OnDestroy, TemplateRef, ElementRef, Renderer2 } from '@angular/core';
+import { NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-arrow-slider',
   templateUrl: './arrow-slider.component.html',
   standalone: true,
-  imports: [
-    NgIf,
-    NgForOf,
-    NgTemplateOutlet
-  ],
-  styleUrls: ['./arrow-slider.component.css']
+  imports: [NgIf, NgForOf, NgTemplateOutlet],
+  styleUrls: ['./arrow-slider.component.css'],
 })
 export class ArrowSliderComponent implements OnInit, OnDestroy {
   @Input() cards: any[] = [];
@@ -24,9 +20,9 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
   @Input() cardTemplate!: TemplateRef<any>;
   currentIndex = 0;
   intervalId: any;
+  hoverTimeoutId: any; // Added a timeout ID for clearing hover state
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {
-  }
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.settings = {
@@ -35,38 +31,61 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
       slideInterval: 3000,
       cardsPerSlide: 6,
       slideDir: 'horizontal',
-      ...this.settings
+      ...this.settings,
     };
 
     if (this.settings.autoSlide) {
       this.startAutoSlide();
     }
+
+    // Add hover event listeners to stop and restart auto-slide
+    this.el.nativeElement.addEventListener('mouseenter', this.stopAutoSlide.bind(this));
+    this.el.nativeElement.addEventListener('mouseleave', this.restartAutoSlide.bind(this));
   }
 
   ngOnDestroy() {
     if (this.intervalId) {
       clearInterval(this.intervalId);
     }
+    // Remove hover event listeners to prevent memory leaks
+    this.el.nativeElement.removeEventListener('mouseenter', this.stopAutoSlide.bind(this));
+    this.el.nativeElement.removeEventListener('mouseleave', this.restartAutoSlide.bind(this));
   }
 
+  // Start the auto-slide
   startAutoSlide() {
     this.intervalId = setInterval(() => {
       this.nextSlide();
     }, this.settings.slideInterval);
   }
 
+  // Stop the auto-slide
+  stopAutoSlide() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+
+  // Restart the auto-slide after hover ends
+  restartAutoSlide() {
+    if (this.settings.autoSlide) {
+      this.startAutoSlide();
+    }
+  }
+
   prevSlide() {
-    this.addAnimationClass(this.settings.slideDir == "horizontal" ? 'slide-in-right' : 'slide-in-top');
-    this.currentIndex = (this.currentIndex > 0) ? this.currentIndex - 1 : this.getCardBatches().length - 1;
-    this.resetAutoSlide();  // Reset auto-slide on manual navigation
+    this.addAnimationClass(this.settings.slideDir == 'horizontal' ? 'slide-in-right' : 'slide-in-top');
+    this.currentIndex = this.currentIndex > 0 ? this.currentIndex - 1 : this.getCardBatches().length - 1;
+    this.resetAutoSlide(); // Reset auto-slide on manual navigation
   }
 
   nextSlide() {
-    this.addAnimationClass(this.settings.slideDir == "horizontal" ? "slide-in-left" : 'slide-in-bottom');
-    this.currentIndex = (this.currentIndex < this.getCardBatches().length - 1) ? this.currentIndex + 1 : 0;
-    this.resetAutoSlide();  // Reset auto-slide on manual navigation
+    this.addAnimationClass(this.settings.slideDir == 'horizontal' ? 'slide-in-left' : 'slide-in-bottom');
+    this.currentIndex = this.currentIndex < this.getCardBatches().length - 1 ? this.currentIndex + 1 : 0;
+    this.resetAutoSlide(); // Reset auto-slide on manual navigation
   }
 
+  // Reset the auto-slide if the user manually navigates
   resetAutoSlide() {
     if (this.settings.autoSlide) {
       clearInterval(this.intervalId);

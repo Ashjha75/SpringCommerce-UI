@@ -19,9 +19,9 @@
   transition: transform 0.3s ease;
 }
 
-.card:hover .card-image {
-  transform: scale(1.05);
-}
+/*.card:hover .card-image {*/
+/*  transform: scale(1.05);*/
+/*}*/
 
 .icon-container {
   @apply absolute top-2 left-2 z-30 flex items-center;
