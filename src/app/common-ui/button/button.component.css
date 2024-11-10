@@ -24,25 +24,23 @@
 .quantity-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 10px;
-  width: 150px; /* Fixed width for better layout */
+  width: 11rem; /* Fixed width for better layout */
   margin: 10px auto;
-  border: 1px solid #ddd;
+  border: 2px solid #3d444d;
   border-radius: 5px;
   padding: 5px 10px;
-  background-color: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Quantity buttons */
 .quantity-btn {
-  width: 30px;
-  height: 30px;
+  width: 2rem;
+  height: 2rem;
   font-size: 20px;
   color: #333;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #756666;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -51,9 +49,13 @@
   transition: background-color 0.3s, transform 0.2s;
 }
 
+
 .quantity-btn:hover {
   background-color: #f0f0f0;
   transform: scale(1.1); /* Slightly enlarge on hover */
+  border: 3px solid #007bff;
+  color: #007bff;
+  display: none;
 }
 
 .quantity-btn:active {
@@ -63,7 +65,7 @@
 .quantity {
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #ebe5d9;
   transition: color 0.3s ease-in-out;
 }
 

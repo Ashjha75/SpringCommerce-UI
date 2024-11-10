@@ -38,6 +38,12 @@
   <div>
     <div class="text-secondary text-xs gap-2 flex justify-start  items-center "><span class="text-[#ef4372]">$672</span><span
       class="line-through -mb-1">$2121</span></div>
-    <app-button [label]="getButtonLabel" (onClick)="onCardClick()"></app-button>
+    <div class="flex justify-between items-center">
+      <div
+        class=" relative text-gray-500 hover:text-gray-700 border-[0.1px] border-outline rounded-md py-2 px-3 w-fit">
+        <i class="fa fa-bookmark text-highlight" aria-hidden="true"></i>
+      </div>
+      <app-button [label]="getButtonLabel" (onClick)="onCardClick()"></app-button>
+    </div>
   </div>
 </div>
