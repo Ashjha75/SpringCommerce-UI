@@ -1,5 +1,7 @@
 import {NgClass, NgIf} from '@angular/common';
 import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {CommonstateService} from '../../services/commonstate.service';
+
 
 @Component({
   selector: 'app-button',
@@ -11,8 +13,9 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent {
+
   @Input() label: string = 'Click Me';
-  @Input() type: string = 'secondary'; // 'primary', 'secondary', 'quantity'
+  @Input() type: string = 'primary'; // 'primary', 'secondary', 'quantity'
   @Output() onClick = new EventEmitter<void>();
 
   quantity: number = 1;

@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, OnDestroy, TemplateRef, ElementRef, Renderer2 } from '@angular/core';
-import { NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
+import {Component, Input, OnInit, OnDestroy, TemplateRef, ElementRef, Renderer2} from '@angular/core';
+import {NgForOf, NgIf, NgTemplateOutlet} from '@angular/common';
 
 @Component({
   selector: 'app-arrow-slider',
@@ -20,9 +20,9 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
   @Input() cardTemplate!: TemplateRef<any>;
   currentIndex = 0;
   intervalId: any;
-  hoverTimeoutId: any; // Added a timeout ID for clearing hover state
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {
+  }
 
   ngOnInit() {
     this.settings = {
@@ -38,9 +38,7 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
       this.startAutoSlide();
     }
 
-    // Add hover event listeners to stop and restart auto-slide
-    this.el.nativeElement.addEventListener('mouseenter', this.stopAutoSlide.bind(this));
-    this.el.nativeElement.addEventListener('mouseleave', this.restartAutoSlide.bind(this));
+
   }
 
   ngOnDestroy() {
@@ -48,8 +46,6 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
       clearInterval(this.intervalId);
     }
     // Remove hover event listeners to prevent memory leaks
-    this.el.nativeElement.removeEventListener('mouseenter', this.stopAutoSlide.bind(this));
-    this.el.nativeElement.removeEventListener('mouseleave', this.restartAutoSlide.bind(this));
   }
 
   // Start the auto-slide

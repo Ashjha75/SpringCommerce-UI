@@ -9,6 +9,7 @@ import {ArrowSliderComponent} from '../../common-ui/arrow-slider/arrow-slider.co
 // @ts-ignore
 import {categoryData, cardData, foodData, featuresData, product1} from '../../../assets/data/jsonData';
 import {CartCardComponent} from '../../common-ui/cart-card/cart-card.component';
+import {CommonstateService} from '../../services/commonstate.service';
 
 @Component({
   selector: 'app-home',
@@ -25,6 +26,9 @@ import {CartCardComponent} from '../../common-ui/cart-card/cart-card.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  constructor(private commonstateService: CommonstateService) {
+  }
+
   categoryData = categoryData;
   cardData = cardData;
   foodData = foodData;
@@ -106,14 +110,20 @@ export class HomeComponent {
   };
   productSliderSettings = {
     showArrows: true,
-    autoSlide: true,
+    autoSlide: false,
     slideInterval: 5000,
     cardsPerSlide: 4,
     slideDir: "horizontal" as "horizontal" | "vertical",
     extraCssClasses: 'w-full bg-white',
   };
 
-  handleCardClick(cardDetails: any) {
+  isPresentInCart(product: any) {
+    const cartProductIds = this.commonstateService.getCartProductIds();
+    return cartProductIds.includes(product.id);
+
+  }
+
+  handleCardClick($event: any) {
 
   }
 }

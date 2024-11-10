@@ -15,13 +15,14 @@ import {product1} from '../../assets/data/jsonData';
     DecimalPipe
   ],
   templateUrl: './cart-card.component.html',
-  styleUrl: './cart-card.component.css'
+  styleUrls: ['./cart-card.component.css']
 })
 export class CartCardComponent {
+  addedToCart: boolean = false;
+
   constructor(private stateService: CommonstateService) {
   }
 
-  getButtonLabel = "Add to Cart";
   @Input() settings: {
     showTitle?: boolean;
     showDescription?: boolean;
@@ -67,6 +68,7 @@ export class CartCardComponent {
 
   get defaultData() {
     return {
+      id: '',
       title: '',
       description: '',
       imageUrl: '',
@@ -78,11 +80,21 @@ export class CartCardComponent {
     };
   }
 
+  getButtonLabel(): string {
+    return this.addedToCart ? 'Remove from Cart' : 'Add to Cart';
+  }
 
+  getButtonType(): string {
+    return this.addedToCart ? 'secondary' : 'primary';
+  }
 
-  // Call this method when the user clicks "Add to Cart"
   onCardClick(): void {
-    console.log('Product added to cart:', this.defaultData);
-    // this.stateService.addProductToCart(this.defaultData);
+    this.addedToCart = !this.addedToCart;
+    if (this.addedToCart) {
+      this.stateService.addProductToCart(this.defaultData);
+    } else {
+      this.stateService.removeProductFromCart(this.defaultData.id);
+    }
+    this.cardClick.emit(this.defaultData);
   }
 }
