@@ -1,7 +1,9 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {DecimalPipe, NgClass, NgIf} from '@angular/common';
 import {ButtonComponent} from '../button/button.component';
-
+import {CommonstateService} from '../../services/commonstate.service';
+// @ts-ignore
+import {product1} from '../../assets/data/jsonData';
 @Component({
   selector: 'app-cart-card',
   standalone: true,
@@ -15,6 +17,7 @@ import {ButtonComponent} from '../button/button.component';
   styleUrl: './cart-card.component.css'
 })
 export class CartCardComponent {
+  constructor(private stateService: CommonstateService) {}
 
   getButtonLabel = "Add to Cart";
   @Input() settings: {
@@ -77,4 +80,8 @@ export class CartCardComponent {
     this.cardClick.emit(this.defaultData);
   }
 
+  // Call this method when the user clicks "Add to Cart"
+  addToCart(product:product1): void {
+    this.stateService.addProductToCart(product);
+  }
 }
