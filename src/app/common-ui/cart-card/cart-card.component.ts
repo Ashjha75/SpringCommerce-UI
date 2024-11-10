@@ -38,6 +38,7 @@ export class CartCardComponent {
     offerValue?: string;
     iconText?: string,
     time?: string
+    quantity?: string
   } = {};
 
   @Output() cardClick = new EventEmitter<any>();
@@ -67,6 +68,7 @@ export class CartCardComponent {
       name: '',
       price: '',
       iconText: '',
+      quantity: '',
       ...this.data
     };
   }

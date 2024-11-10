@@ -14,17 +14,17 @@
     <div *ngIf="defaultSettings.showImage" class="mb-4 border-2 p-[7px] rounded-xl border-[#3d444d] ">
       <img [src]="defaultData.imageUrl" alt="Card image" class="cursor-pointer" [ngClass]="defaultSettings.imgcss">
     </div>
-    <div *ngIf="defaultSettings.showImage" class="w-fit gap-0.5 p-[2px]  glass-back  flex justify-center items-center">
-      <img src="assets/img/clock.svg" alt="Card image" class="w-4 h-4" > <span class="text-xs font-bold text-secondary">{{defaultData.time}}</span>
+    <div *ngIf="defaultSettings.showImage" class="w-fit gap-1 p-[3px]  glass-back  flex justify-center items-center">
+      <img src="assets/img/clock.png" alt="Card image" class="w-4 h-4" > <span class="text-xs font-bold text-secondary">{{defaultData.time}}</span>
     </div>
-    <div *ngIf="defaultSettings.showTitle" class="mb-2" [ngClass]="defaultSettings.titlecss">
+    <div *ngIf="defaultSettings.showTitle" class="mb-3" [ngClass]="defaultSettings.titlecss">
       <h2 class="title">{{ defaultData.title }}</h2>
     </div>
-    <div *ngIf="defaultSettings.showDescription">
+    <div *ngIf="defaultSettings.showDescription" >
       <p class="text-gray-700">{{ defaultData.description }}</p>
     </div>
-    <div class="my-2 text-white">
-      <p class="text-secondary text-sm">1 piece</p>
+    <div class="my-2 text-white mt-2" >
+      <p class="text-secondary text-sm">{{defaultData.quantity}}</p>
     </div>
     <div *ngIf="defaultSettings.showPrice"
          class="hover-box mt-4 p-2 flex justify-center items-center gap-2 glass-bg w-fit px-4 ml-[3px] absolute bottom-10 rounded-[2.5rem]">

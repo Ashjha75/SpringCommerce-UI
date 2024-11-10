@@ -248,6 +248,7 @@ export const product1 = [
     originalPrice: "₹ 499",
     offerValue: 12.5,
     time: "30mins",
+    quantity: "1 Piece",
   },
   {
     id: idCounter++,
@@ -258,6 +259,7 @@ export const product1 = [
     originalPrice: "₹ 499",
     offerValue: 15,
     time: "15mins",
+    quantity: "1 Piece",
   },
   {
     id: idCounter++,
@@ -268,6 +270,7 @@ export const product1 = [
     originalPrice: "₹ 499",
     offerValue: 4.67,
     time: "10mins",
+    quantity: "1 Piece",
   },
   {
     id: idCounter++,
@@ -278,6 +281,7 @@ export const product1 = [
     originalPrice: "₹ 499",
     offerValue: 12.99912,
     time: "16mins",
+    quantity: "1 Piece",
   },
   {
     id: idCounter++,
@@ -288,6 +292,7 @@ export const product1 = [
     originalPrice: "₹ 499",
     offerValue: 14.2,
     time: "20mins",
+    quantity: "1 Piece",
   },
   {
     id: idCounter++,
@@ -298,6 +303,7 @@ export const product1 = [
     originalPrice: "₹ 499",
     offerValue: 20,
     time: "10mins",
+    quantity: "1 Piece",
   },
   {
     id: idCounter++,
@@ -308,5 +314,6 @@ export const product1 = [
     originalPrice: "499",
     offerValue: 13.4,
     time: "10mins",
+    quantity: "1 Piece",
   }
 ];

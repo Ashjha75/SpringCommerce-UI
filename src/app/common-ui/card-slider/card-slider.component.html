@@ -1,7 +1,7 @@
-<div class="relative w-full h-96 overflow-hidden">
+<div class="relative w-full  overflow-hidden">
   <div class="flex transition-transform duration-500 ease-in-out" [style.transform]="transform">
-    <div *ngFor="let offer of offers" class="w-full flex-shrink-0">
-      <img [src]="offer.image" alt="Offer" class="w-full h-96 object-cover">
+    <div *ngFor="let offer of offers" class="card-wrapper">
+      <img [src]="offer.image" alt="Offer" class="card-image">
     </div>
   </div>
   <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 glass-bg p-4 rounded-4xl">
