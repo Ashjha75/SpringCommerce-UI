@@ -1,6 +1,5 @@
 <div [ngClass]="defaultSettings.extraCssClasses"
-     class="card flex flex-col justify-between relative rounded-lg shadow-lg p-2 mb-16"
-     (click)="onCardClick()">
+     class="card flex flex-col justify-between relative rounded-lg shadow-lg p-2 mb-16">
   <div>
     <div class="icon-container top-1 left-2 text-secondary font-bold flex items-center"
          *ngIf="defaultData.offerValue">
@@ -42,8 +41,7 @@
         class="relative text-gray-500 hover:text-gray-700 border-[0.1px] border-outline rounded-md py-2 px-3 w-fit">
         <i class="fa fa-bookmark text-highlight" aria-hidden="true"></i>
       </div>
-      <app-button [label]="getButtonLabel()" [type]="getButtonType()"
-                  (onClick)="onCardClick()"></app-button>
+      <app-button [label]="buttonLabel" [type]="buttonType" (onClick)="onCardClick()"></app-button>
     </div>
   </div>
 </div>

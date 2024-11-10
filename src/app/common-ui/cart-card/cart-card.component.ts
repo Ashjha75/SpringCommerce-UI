@@ -1,9 +1,7 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {DecimalPipe, NgClass, NgIf} from '@angular/common';
-import {ButtonComponent} from '../button/button.component';
-import {CommonstateService} from '../../services/commonstate.service';
-// @ts-ignore
-import {product1} from '../../assets/data/jsonData';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { DecimalPipe, NgClass, NgIf } from '@angular/common';
+import { ButtonComponent } from '../button/button.component';
+import { CommonstateService } from '../../services/commonstate.service';
 
 @Component({
   selector: 'app-cart-card',
@@ -18,11 +16,6 @@ import {product1} from '../../assets/data/jsonData';
   styleUrls: ['./cart-card.component.css']
 })
 export class CartCardComponent {
-  addedToCart: boolean = false;
-
-  constructor(private stateService: CommonstateService) {
-  }
-
   @Input() settings: {
     showTitle?: boolean;
     showDescription?: boolean;
@@ -36,18 +29,23 @@ export class CartCardComponent {
   } = {};
 
   @Input() data: {
+    id?: string;
     title?: string;
     description?: string;
     imageUrl?: string;
     name?: string;
     price?: string;
     offerValue?: string;
-    iconText?: string,
-    time?: string
-    quantity?: string
+    iconText?: string;
+    time?: string;
+    quantity?: string;
   } = {};
 
   @Output() cardClick = new EventEmitter<any>();
+
+  addedToCart: boolean = false;
+
+  constructor(private stateService: CommonstateService) {}
 
   get defaultSettings() {
     return {
@@ -80,11 +78,11 @@ export class CartCardComponent {
     };
   }
 
-  getButtonLabel(): string {
+  get buttonLabel(): string {
     return this.addedToCart ? 'Remove from Cart' : 'Add to Cart';
   }
 
-  getButtonType(): string {
+  get buttonType(): string {
     return this.addedToCart ? 'secondary' : 'primary';
   }
 
