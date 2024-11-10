@@ -113,9 +113,7 @@ export class HomeComponent {
     extraCssClasses: 'w-full bg-white',
   };
 
-//   outputs
   handleCardClick(cardDetails: any) {
-    console.log('Card clicked:', cardDetails);
-    // Handle the card details as needed
+
   }
 }

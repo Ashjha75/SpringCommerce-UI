@@ -4,6 +4,7 @@ import {ButtonComponent} from '../button/button.component';
 import {CommonstateService} from '../../services/commonstate.service';
 // @ts-ignore
 import {product1} from '../../assets/data/jsonData';
+
 @Component({
   selector: 'app-cart-card',
   standalone: true,
@@ -17,7 +18,8 @@ import {product1} from '../../assets/data/jsonData';
   styleUrl: './cart-card.component.css'
 })
 export class CartCardComponent {
-  constructor(private stateService: CommonstateService) {}
+  constructor(private stateService: CommonstateService) {
+  }
 
   getButtonLabel = "Add to Cart";
   @Input() settings: {
@@ -81,7 +83,8 @@ export class CartCardComponent {
   }
 
   // Call this method when the user clicks "Add to Cart"
-  addToCart(product:product1): void {
-    this.stateService.addProductToCart(product);
+  addToCart(): void {
+    console.log('Product added to cart:', this.cardClick);
+    this.stateService.addProductToCart(this.cardClick);
   }
 }
