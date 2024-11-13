@@ -10,6 +10,7 @@ import {ArrowSliderComponent} from '../../common-ui/arrow-slider/arrow-slider.co
 import {categoryData, cardData, foodData, featuresData, product1} from '../../../assets/data/jsonData';
 import {CartCardComponent} from '../../common-ui/cart-card/cart-card.component';
 import {CommonstateService} from '../../services/commonstate.service';
+import {FooterComponent} from '../../common-ui/footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,7 @@ import {CommonstateService} from '../../services/commonstate.service';
     CommonUiModule,
     ArrowSliderComponent,
     CartCardComponent,
+    FooterComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
