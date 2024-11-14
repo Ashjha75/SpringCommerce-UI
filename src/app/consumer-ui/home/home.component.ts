@@ -6,7 +6,6 @@ import {CardComponent} from '../../common-ui/card/card.component';
 import {NgForOf} from '@angular/common';
 import {CommonUiModule} from '../../common-ui/common-ui.module';
 import {ArrowSliderComponent} from '../../common-ui/arrow-slider/arrow-slider.component';
-// @ts-ignore
 import {categoryData, cardData, foodData, featuresData, product1} from '../../../assets/data/jsonData';
 import {CartCardComponent} from '../../common-ui/cart-card/cart-card.component';
 import {CommonstateService} from '../../services/commonstate.service';

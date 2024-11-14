@@ -1,31 +1,28 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, CanActivateChildFn, Router } from '@angular/router';
-import { CommonService } from 'platform-utils';
 import { AuthService } from './auth.service';
 
 export const authGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
   const authService = inject(AuthService);
-  const commonService = inject(CommonService);
   const url: string = state.url;
 
-  return checkLogin(url, router, commonService);
+  return checkLogin(url, router, authService);
 };
 
 export const authGuardChild: CanActivateChildFn = (childRoute, state) => {
   const router = inject(Router);
   const authService = inject(AuthService);
-  const commonService = inject(CommonService);
   const url: string = state.url;
 
-  return checkLogin(url, router, commonService);
+  return checkLogin(url, router, authService);
 };
 
-function checkLogin(url: string, router: Router, commonService: CommonService): boolean {
+function checkLogin(url: string, router: Router, authService: AuthService): boolean {
   if (url === '/admin/login') {
     return true;
   }
-  if (commonService.isAuthenticated) {
+  if (authService.isLoggedIn()) {
     return true;
   }
   router.navigate(['admin/login'], { queryParams: { returnUrl: url } });
