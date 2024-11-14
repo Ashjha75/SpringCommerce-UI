@@ -1,22 +1,90 @@
+/* General button styling */
 .btn {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  @apply w-full my-5
+  transition: transform 0.2s ease-in-out; /* Animation for button scaling */
+  width: 100%;
+  margin: 10px 0;
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #007bff; /* Blue */
   color: white;
   border: none;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  color: white;
-  border: none;
+  border-radius: 50px; /* Rounded corners */
 }
 
 .btn:hover {
   opacity: 0.8;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Quantity adjustment buttons */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  width: 11rem; /* Fixed width for better layout */
+  margin: 10px auto;
+  border: 2px solid #3d444d;
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Quantity buttons */
+.quantity-btn {
+  width: 2rem;
+  height: 2rem;
+  font-size: 20px;
+  color: #333;
+  border: 1px solid #756666;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+
+.quantity-btn:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  border: 3px solid #007bff;
+  color: #007bff;
+  display: none;
+}
+
+.quantity-btn:active {
+  background-color: #e0e0e0;
+}
+
+.quantity {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ebe5d9;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Animation for quantity change */
+/*.quantity-container .quantity {*/
+/*  animation: quantityChange 0.3s ease;*/
+/*}*/
+
+@keyframes quantityChange {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

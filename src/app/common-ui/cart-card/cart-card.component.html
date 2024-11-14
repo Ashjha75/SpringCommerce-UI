@@ -1,6 +1,5 @@
 <div [ngClass]="defaultSettings.extraCssClasses"
-     class="card flex flex-col justify-between relative rounded-lg shadow-lg p-2 mb-16 "
-     (click)="onCardClick()">
+     class="card flex flex-col justify-between relative rounded-lg shadow-lg p-2 mb-16">
   <div>
     <div class="icon-container top-1 left-2 text-secondary font-bold flex items-center"
          *ngIf="defaultData.offerValue">
@@ -11,10 +10,10 @@
       </p>
     </div>
 
-    <div *ngIf="defaultSettings.showImage" class="mb-4 border-2 p-[7px] rounded-xl border-[#3d444d] ">
+    <div *ngIf="defaultSettings.showImage" class="mb-4 border-2 p-[7px] rounded-xl border-[#3d444d]">
       <img [src]="defaultData.imageUrl" alt="Card image" class="cursor-pointer" [ngClass]="defaultSettings.imgcss">
     </div>
-    <div *ngIf="defaultSettings.showImage" class="w-fit gap-1 p-[3px]  glass-back  flex justify-center items-center">
+    <div *ngIf="defaultSettings.showImage" class="w-fit gap-1 p-[3px] glass-back flex justify-center items-center">
       <img src="assets/img/clock.png" alt="Card image" class="w-4 h-4"> <span
       class="text-xs font-bold text-secondary">{{ defaultData.time }}</span>
     </div>
@@ -30,14 +29,19 @@
     <div *ngIf="defaultSettings.showPrice"
          class="hover-box mt-4 p-2 flex justify-center items-center gap-2 glass-bg w-fit px-4 ml-[3px] absolute bottom-10 rounded-[2.5rem]">
       <p class="font-semibold text-secondary text-xs">{{ defaultData.name }} from</p>
-      <p class="text-xs bg-highlight text-secondary p-1 px-3 rounded-4xl ">₹ {{ defaultData.price }}</p>
+      <p class="text-xs bg-highlight text-secondary p-1 px-3 rounded-4xl">₹ {{ defaultData.price }}</p>
     </div>
-
-
   </div>
   <div>
-    <div class="text-secondary text-xs gap-2 flex justify-start  items-center "><span class="text-[#ef4372]">$672</span><span
+    <div class="text-secondary text-xs gap-2 flex justify-start items-center"><span
+      class="text-[#ef4372]">$672</span><span
       class="line-through -mb-1">$2121</span></div>
-    <app-button [label]="getButtonLabel" (onClick)="addToCart($event)"></app-button>
+    <div class="flex justify-between items-center">
+      <div
+        class="relative text-gray-500 hover:text-gray-700 border-[0.1px] border-outline rounded-md py-2 px-3 w-fit">
+        <i class="fa fa-bookmark text-highlight" aria-hidden="true"></i>
+      </div>
+      <app-button [label]="buttonLabel" [type]="buttonType" (onClick)="onCardClick()"></app-button>
+    </div>
   </div>
 </div>

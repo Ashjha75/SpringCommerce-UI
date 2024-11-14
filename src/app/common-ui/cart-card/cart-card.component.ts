@@ -1,9 +1,8 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {DecimalPipe, NgClass, NgIf} from '@angular/common';
-import {ButtonComponent} from '../button/button.component';
-import {CommonstateService} from '../../services/commonstate.service';
-// @ts-ignore
-import {product1} from '../../assets/data/jsonData';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { DecimalPipe, NgClass, NgIf } from '@angular/common';
+import { ButtonComponent } from '../button/button.component';
+import { CommonstateService } from '../../services/commonstate.service';
+
 @Component({
   selector: 'app-cart-card',
   standalone: true,
@@ -14,12 +13,9 @@ import {product1} from '../../assets/data/jsonData';
     DecimalPipe
   ],
   templateUrl: './cart-card.component.html',
-  styleUrl: './cart-card.component.css'
+  styleUrls: ['./cart-card.component.css']
 })
 export class CartCardComponent {
-  constructor(private stateService: CommonstateService) {}
-
-  getButtonLabel = "Add to Cart";
   @Input() settings: {
     showTitle?: boolean;
     showDescription?: boolean;
@@ -33,18 +29,23 @@ export class CartCardComponent {
   } = {};
 
   @Input() data: {
+    id?: string;
     title?: string;
     description?: string;
     imageUrl?: string;
     name?: string;
     price?: string;
     offerValue?: string;
-    iconText?: string,
-    time?: string
-    quantity?: string
+    iconText?: string;
+    time?: string;
+    quantity?: string;
   } = {};
 
   @Output() cardClick = new EventEmitter<any>();
+
+  addedToCart: boolean = false;
+
+  constructor(private stateService: CommonstateService) {}
 
   get defaultSettings() {
     return {
@@ -65,6 +66,7 @@ export class CartCardComponent {
 
   get defaultData() {
     return {
+      id: '',
       title: '',
       description: '',
       imageUrl: '',
@@ -76,12 +78,21 @@ export class CartCardComponent {
     };
   }
 
-  onCardClick() {
-    this.cardClick.emit(this.defaultData);
+  get buttonLabel(): string {
+    return this.addedToCart ? 'Remove from Cart' : 'Add to Cart';
   }
 
-  // Call this method when the user clicks "Add to Cart"
-  addToCart(product:product1): void {
-    this.stateService.addProductToCart(product);
+  get buttonType(): string {
+    return this.addedToCart ? 'secondary' : 'primary';
+  }
+
+  onCardClick(): void {
+    this.addedToCart = !this.addedToCart;
+    if (this.addedToCart) {
+      this.stateService.addProductToCart(this.defaultData);
+    } else {
+      this.stateService.removeProductFromCart(this.defaultData.id);
+    }
+    this.cardClick.emit(this.defaultData);
   }
 }

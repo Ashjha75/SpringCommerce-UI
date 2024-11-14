@@ -1,16 +1,12 @@
-import {Component, Input, OnInit, OnDestroy, TemplateRef, ElementRef, Renderer2} from '@angular/core';
-import {NgForOf, NgIf, NgTemplateOutlet} from '@angular/common';
+import { Component, Input, OnInit, OnDestroy, TemplateRef, ElementRef, Renderer2 } from '@angular/core';
+import { NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-arrow-slider',
   templateUrl: './arrow-slider.component.html',
   standalone: true,
-  imports: [
-    NgIf,
-    NgForOf,
-    NgTemplateOutlet
-  ],
-  styleUrls: ['./arrow-slider.component.css']
+  imports: [NgIf, NgForOf, NgTemplateOutlet],
+  styleUrls: ['./arrow-slider.component.css'],
 })
 export class ArrowSliderComponent implements OnInit, OnDestroy {
   @Input() cards: any[] = [];
@@ -24,9 +20,9 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
   @Input() cardTemplate!: TemplateRef<any>;
   currentIndex = 0;
   intervalId: any;
+  isAnimating = false;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {
-  }
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.settings = {
@@ -35,7 +31,7 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
       slideInterval: 3000,
       cardsPerSlide: 6,
       slideDir: 'horizontal',
-      ...this.settings
+      ...this.settings,
     };
 
     if (this.settings.autoSlide) {
@@ -55,16 +51,32 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
     }, this.settings.slideInterval);
   }
 
+  stopAutoSlide() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+
+  restartAutoSlide() {
+    if (this.settings.autoSlide) {
+      this.startAutoSlide();
+    }
+  }
+
   prevSlide() {
-    this.addAnimationClass(this.settings.slideDir == "horizontal" ? 'slide-in-right' : 'slide-in-top');
-    this.currentIndex = (this.currentIndex > 0) ? this.currentIndex - 1 : this.getCardBatches().length - 1;
-    this.resetAutoSlide();  // Reset auto-slide on manual navigation
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+    this.addAnimationClass(this.settings.slideDir === 'horizontal' ? 'slide-in-right' : 'slide-in-top');
+    this.currentIndex = this.currentIndex > 0 ? this.currentIndex - 1 : this.getCardBatches().length - 1;
+    this.resetAutoSlide();
   }
 
   nextSlide() {
-    this.addAnimationClass(this.settings.slideDir == "horizontal" ? "slide-in-left" : 'slide-in-bottom');
-    this.currentIndex = (this.currentIndex < this.getCardBatches().length - 1) ? this.currentIndex + 1 : 0;
-    this.resetAutoSlide();  // Reset auto-slide on manual navigation
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+    this.addAnimationClass(this.settings.slideDir === 'horizontal' ? 'slide-in-left' : 'slide-in-bottom');
+    this.currentIndex = this.currentIndex < this.getCardBatches().length - 1 ? this.currentIndex + 1 : 0;
+    this.resetAutoSlide();
   }
 
   resetAutoSlide() {
@@ -88,6 +100,7 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
     this.renderer.addClass(sliderContainer, className);
     setTimeout(() => {
       this.renderer.removeClass(sliderContainer, className);
-    }, 1000); // Duration of the animation
+      this.isAnimating = false;
+    }, 1000);
   }
 }
