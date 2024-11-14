@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonstateService } from '../../services/commonstate.service';
 import { Subscription } from 'rxjs';
-import {NgIf} from '@angular/common'; // Import Subscription to manage subscriptions
+import {NgIf} from '@angular/common';
+import {Router} from '@angular/router'; // Import Subscription to manage subscriptions
 
 @Component({
   selector: 'app-header',
@@ -27,7 +28,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   private subscriptions: Subscription[] = []; // Array to store subscriptions
 
-  constructor(private stateService: CommonstateService) {}
+  constructor(private stateService: CommonstateService,private router: Router) {}
 
   ngOnInit(): void {
     // Update search placeholder every 1.2 seconds
@@ -72,4 +73,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   protected readonly Number = Number;
+
+  async userDetails(): Promise<void> {
+    await this.router.navigate(['/login']);
+  }
 }
