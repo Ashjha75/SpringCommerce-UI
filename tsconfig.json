@@ -13,17 +13,28 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "sourceMap": true,
-    "declaration": false,
+    "declaration": true,   // Set to true if you want .d.ts files to be generated
     "experimentalDecorators": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",   // Change to "node" for better compatibility
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES6",
     "lib": [
       "ES2022",
       "dom"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",  // Include node_modules/@types if using external types
+      "./path/to/your/declaration/files"  // Specify path if your .d.ts files are in custom locations
     ]
   },
+  "include": [
+    "src/**/*",  // Include all files under the 'src' directory
+    "path/to/your/declaration/files/**/*.d.ts"  // Add custom path for .d.ts files if needed
+  ],
+  "exclude": [
+    "node_modules"  // Exclude node_modules from compilation
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
