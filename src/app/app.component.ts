@@ -1,11 +1,4 @@
 import {Component} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
-import {HeaderComponent} from './common-ui/header/header.component';
-import {CardSliderComponent} from './common-ui/card-slider/card-slider.component';
-import {CommonUiModule} from './common-ui/common-ui.module';
-import {CardComponent} from './common-ui/card/card.component';
-import {NgForOf} from '@angular/common';
-import {HomeComponent} from './consumer-ui/home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -41,41 +34,41 @@ export class AppComponent {
     // title: 'Sample Card Title',
     // description: 'This is a sample description for the card.',
     imageUrl: 'assets/img/cardproduct7.png',
-    name:'Skybags',
-    price:'1999'
+    name: 'Skybags',
+    price: '1999'
   },
     {
       // title: 'T shirt',
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/cardproduct3.jpg',
-      name:'Aldo',
-      price:'999'
+      name: 'Aldo',
+      price: '999'
     },
     {
       // title: 'Sample Card Title',
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/cardproduct5.jpg',
-      name:'Triumph',
-      price:'199'
+      name: 'Triumph',
+      price: '199'
     }, {
       // title: 'Sample Card Title',
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/cardproduct2.jpg',
-      name:'Calvin Klein',
-      price:'399'
+      name: 'Calvin Klein',
+      price: '399'
     }, {
       // title: 'Sample Card Title',
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/cardproduct4.jpg',
-      name:'US. POLO',
-      price:'699'
+      name: 'US. POLO',
+      price: '699'
     }
     , {
       // title: 'Sample Card Title',
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/cardproduct8.png',
-      name:'Sangria',
-      price:'1299'
+      name: 'Sangria',
+      price: '1299'
     }
 
   ]
@@ -83,47 +76,47 @@ export class AppComponent {
     // title: 'Sample Card Title',
     // description: 'This is a sample description for the card.',
     imageUrl: 'assets/img/category1.png',
-    name:'Skybags',
-    price:'1999'
+    name: 'Skybags',
+    price: '1999'
   },
     {
       // title: 'T shirt',
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/category3.png',
-      name:'Aldo',
-      price:'999'
+      name: 'Aldo',
+      price: '999'
     },
     {
       // title: 'Sample Card Title',
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/category8.png',
-      name:'Triumph',
-      price:'199'
+      name: 'Triumph',
+      price: '199'
     }, {
       // title: 'Sample Card Title',
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/category2.png',
-      name:'Calvin Klein',
-      price:'399'
+      name: 'Calvin Klein',
+      price: '399'
     }, {
       // title: 'Sample Card Title',
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/category4.png',
-      name:'US. POLO',
-      price:'699'
+      name: 'US. POLO',
+      price: '699'
     }
     , {
       // title: 'Sample Card Title',
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/category6.png',
-      name:'Sangria',
-      price:'1299'
+      name: 'Sangria',
+      price: '1299'
     }, {
       // title: 'Sample Card Title',
       // description: 'This is a sample description for the card.',
       imageUrl: 'assets/img/category5.png',
-      name:'Sangria',
-      price:'1299'
+      name: 'Sangria',
+      price: '1299'
     }
 
   ]

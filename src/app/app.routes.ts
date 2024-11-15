@@ -1,8 +1,8 @@
 import {RouterModule, Routes} from '@angular/router';
-import { LoginComponent } from './auth/login/login.component';
-import { HomeComponent } from './consumer-ui/home/home.component';
-import { NgModule } from '@angular/core';
-import { AuthGuard } from './auth.guard';
+import {LoginComponent} from './auth/login/login.component';
+import {HomeComponent} from './consumer-ui/home/home.component';
+import {NgModule} from '@angular/core';
+import {AuthGuard} from './auth.guard';
 import {AuthService} from './auth.service';
 // export const routes: Routes = [
 //   { path: '', redirectTo: 'consumerUi/', pathMatch: 'full' },
@@ -16,18 +16,19 @@ function redirectBasedOnAuth(authService: AuthService) {
 }
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'login', component: LoginComponent },
+  {path: '', component: HomeComponent, canActivate: [AuthGuard]},
+  {path: 'login', component: LoginComponent},
   // {
   //   path: 'redirect',
   //   redirectTo: (route, state) => redirectBasedOnAuth(route.injector.get(AuthService))
   // },
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', redirectTo: '' }
+  {path: '**', redirectTo: ''}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}
