@@ -1,5 +1,4 @@
-import { Component, Input, OnInit, OnDestroy, TemplateRef, ElementRef, Renderer2 } from '@angular/core';
-import { NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
+import {Component, ElementRef, Input, OnDestroy, OnInit, Renderer2, TemplateRef} from '@angular/core';
 
 @Component({
   selector: 'app-arrow-slider',
@@ -20,7 +19,8 @@ export class ArrowSliderComponent implements OnInit, OnDestroy {
   intervalId: any;
   isAnimating = false;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {
+  }
 
   ngOnInit() {
     this.settings = {

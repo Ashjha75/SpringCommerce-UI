@@ -1,6 +1,4 @@
-import {NgClass, NgIf} from '@angular/common';
-import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {CommonstateService} from '../../services/commonstate.service';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 
 @Component({

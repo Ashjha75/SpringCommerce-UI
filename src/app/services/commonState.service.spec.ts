@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { CommonstateService } from './commonstate.service';
+import {CommonstateService} from './commonstate.service';
 
 describe('CommonserviceService', () => {
   let service: CommonstateService;

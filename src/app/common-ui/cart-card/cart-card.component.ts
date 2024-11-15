@@ -1,7 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { DecimalPipe, NgClass, NgIf } from '@angular/common';
-import { ButtonComponent } from '../button/button.component';
-import { CommonstateService } from '../../services/commonstate.service';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {CommonstateService} from '../../services/commonstate.service';
 
 @Component({
   selector: 'app-cart-card',
@@ -38,7 +36,8 @@ export class CartCardComponent {
 
   addedToCart: boolean = false;
 
-  constructor(private stateService: CommonstateService) {}
+  constructor(private stateService: CommonstateService) {
+  }
 
   get defaultSettings() {
     return {
