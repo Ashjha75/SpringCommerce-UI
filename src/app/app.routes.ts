@@ -16,14 +16,14 @@ function redirectBasedOnAuth(authService: AuthService) {
 }
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: '123', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   // {
   //   path: 'redirect',
   //   redirectTo: (route, state) => redirectBasedOnAuth(route.injector.get(AuthService))
   // },
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', redirectTo: 'home' }
+  { path: '**', redirectTo: '' }
 ];
 
 // @NgModule({

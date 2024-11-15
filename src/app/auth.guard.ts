@@ -18,14 +18,14 @@ export const authGuardChild: CanActivateChildFn = (childRoute, state) => {
   return checkLogin(url, router, authService);
 };
 
-function checkLogin(url: string, router: Router, authService: AuthService): boolean {
-  if (url === '/admin/login') {
+ function checkLogin(url: string, router: Router, authService: AuthService): any {
+  if (url === 'login') {
     return true;
   }
   if (authService.isLoggedIn()) {
     return true;
   }
-  router.navigate(['admin/login'], { queryParams: { returnUrl: url } });
+ router.navigate(['login'], { queryParams: { returnUrl: url } });
   return false;
 }
 
