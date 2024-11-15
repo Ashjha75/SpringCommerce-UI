@@ -1,22 +1,19 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ConsumerUiRoutingModule } from './consumer-ui-routing.module';
-import { CommonUiModule } from '../common-ui/common-ui.module';
-import { HomeComponent } from './home/home.component';
-import {HeaderComponent} from '../common-ui/header/header.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ConsumerUiRoutingModule} from './consumer-ui-routing.module';
+import {CommonUiModule} from '../common-ui/common-ui.module';
+import {HomeComponent} from './home/home.component';
 
 @NgModule({
-    declarations: [
-        HomeComponent,
-        HeaderComponent
-    ],
-    exports: [
-        HeaderComponent
-    ],
-    imports: [
-        CommonModule,
-        ConsumerUiRoutingModule,
-        CommonUiModule
-    ]
+  declarations: [
+    HomeComponent,
+  ],
+  exports: [],
+  imports: [
+    CommonModule,
+    ConsumerUiRoutingModule,
+    CommonUiModule
+  ]
 })
-export class ConsumerUiModule { }
+export class ConsumerUiModule {
+}

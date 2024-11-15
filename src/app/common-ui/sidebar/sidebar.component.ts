@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
-import {NgClass, NgComponentOutlet, NgIf} from '@angular/common';
+import {Component, Input, OnInit} from '@angular/core';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-sidebar',
@@ -20,9 +19,11 @@ export class SidebarComponent implements OnInit {
   @Input() isOpen: boolean = false;
   @Input() content: any;
 
-  constructor() { }
+  constructor() {
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
 
   get sidebarState() {
     return this.isOpen ? 'in' : 'out';
