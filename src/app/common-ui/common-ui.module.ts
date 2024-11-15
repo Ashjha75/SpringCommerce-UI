@@ -6,6 +6,7 @@ import { ArrowSliderComponent } from './arrow-slider/arrow-slider.component';
 import { CardSliderComponent } from './card-slider/card-slider.component';
 import { CartCardComponent } from './cart-card/cart-card.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
     ArrowSliderComponent,
     CardSliderComponent,
     CartCardComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule
@@ -25,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     ArrowSliderComponent,
     CardSliderComponent,
     CartCardComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ]
 })
 export class CommonUiModule { }

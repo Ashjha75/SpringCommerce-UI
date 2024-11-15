@@ -7,9 +7,6 @@ import {Router} from '@angular/router'; // Import Subscription to manage subscri
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  imports: [
-    NgIf
-  ],
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit, OnDestroy {

@@ -5,18 +5,18 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routes';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './consumer-ui/home/home.component';
-import {HeaderComponent} from './common-ui/header/header.component';
+import { CommonUiModule } from './common-ui/common-ui.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent,
-    HeaderComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonUiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
