@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ConsumerUiRoutingModule } from './consumer-ui-routing.module';
 import { CommonUiModule } from '../common-ui/common-ui.module';
 import { HomeComponent } from './home/home.component';
+import {HeaderComponent} from '../common-ui/header/header.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,

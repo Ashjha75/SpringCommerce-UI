@@ -5,10 +5,7 @@ import {CommonstateService} from '../../services/commonstate.service';
 
 @Component({
   selector: 'app-button',
-  standalone: true,
-  imports: [
-    NgClass, NgIf
-  ],
+
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.css']
 })
