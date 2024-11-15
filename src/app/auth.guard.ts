@@ -1,6 +1,6 @@
-import { inject } from '@angular/core';
-import { CanActivateFn, CanActivateChildFn, Router } from '@angular/router';
-import { AuthService } from './auth.service';
+import {inject} from '@angular/core';
+import {CanActivateChildFn, CanActivateFn, Router} from '@angular/router';
+import {AuthService} from './auth.service';
 
 export const AuthGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
@@ -18,14 +18,14 @@ export const authGuardChild: CanActivateChildFn = (childRoute, state) => {
   return checkLogin(url, router, authService);
 };
 
- function checkLogin(url: string, router: Router, authService: AuthService): any {
+function checkLogin(url: string, router: Router, authService: AuthService): any {
   if (url === 'login') {
     return true;
   }
   if (authService.isLoggedIn()) {
     return true;
   }
- router.navigate(['login'], { queryParams: { returnUrl: url } });
+  router.navigate(['login'], {queryParams: {returnUrl: url}});
   return false;
 }
 

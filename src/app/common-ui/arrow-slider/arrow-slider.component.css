@@ -119,6 +119,7 @@
     opacity: 1;
   }
 }
+
 @-webkit-keyframes slide-in-top {
   0% {
     -webkit-transform: translateY(-220px);

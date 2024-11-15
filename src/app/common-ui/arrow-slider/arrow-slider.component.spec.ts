@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ArrowSliderComponent } from './arrow-slider.component';
+import {ArrowSliderComponent} from './arrow-slider.component';
 
 describe('ArrowSliderComponent', () => {
   let component: ArrowSliderComponent;
@@ -10,7 +10,7 @@ describe('ArrowSliderComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ArrowSliderComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ArrowSliderComponent);
     component = fixture.componentInstance;

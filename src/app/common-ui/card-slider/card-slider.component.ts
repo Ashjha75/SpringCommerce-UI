@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import {NgForOf} from '@angular/common';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-card-slider',
