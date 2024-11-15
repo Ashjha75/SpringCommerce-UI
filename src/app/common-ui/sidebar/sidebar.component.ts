@@ -6,11 +6,6 @@ import {NgClass, NgComponentOutlet, NgIf} from '@angular/common';
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
-  imports: [
-    NgIf,
-    NgComponentOutlet,
-    NgClass
-  ],
   animations: [
     trigger('slideInOut', [
       state('in', style({transform: 'translateX(0)'})),

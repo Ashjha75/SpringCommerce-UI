@@ -6,17 +6,18 @@ import { AppRoutingModule } from './app.routes';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './consumer-ui/home/home.component';
 import { CommonUiModule } from './common-ui/common-ui.module';
+import {HeaderComponent} from './common-ui/header/header.component';
+import {ConsumerUiModule} from './consumer-ui/consumer-ui.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonUiModule
+    CommonUiModule,
+    ConsumerUiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

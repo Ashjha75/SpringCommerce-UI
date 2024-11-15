@@ -28,7 +28,7 @@ import { HeaderComponent } from './header/header.component';
     CardSliderComponent,
     CartCardComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
   ]
 })
 export class CommonUiModule { }
