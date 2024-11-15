@@ -6,14 +6,17 @@ import { HomeComponent } from './home/home.component';
 import {HeaderComponent} from '../common-ui/header/header.component';
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    HeaderComponent
-  ],
-  imports: [
-    CommonModule,
-    ConsumerUiRoutingModule,
-    CommonUiModule
-  ]
+    declarations: [
+        HomeComponent,
+        HeaderComponent
+    ],
+    exports: [
+        HeaderComponent
+    ],
+    imports: [
+        CommonModule,
+        ConsumerUiRoutingModule,
+        CommonUiModule
+    ]
 })
 export class ConsumerUiModule { }

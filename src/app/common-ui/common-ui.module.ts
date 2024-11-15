@@ -7,7 +7,6 @@ import { CardSliderComponent } from './card-slider/card-slider.component';
 import { CartCardComponent } from './cart-card/cart-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import {ButtonComponent} from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +16,10 @@ import {ButtonComponent} from './button/button.component';
     CardSliderComponent,
     CartCardComponent,
     FooterComponent,
-    ButtonComponent,
+    HeaderComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule
   ],
   exports: [
     SidebarComponent,
@@ -29,6 +28,7 @@ import {ButtonComponent} from './button/button.component';
     CardSliderComponent,
     CartCardComponent,
     FooterComponent,
+    HeaderComponent
   ]
 })
 export class CommonUiModule { }
