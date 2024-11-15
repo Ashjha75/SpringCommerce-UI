@@ -2,7 +2,7 @@
   width: 90%; /* Main card width */
   flex-shrink: 0;
   transition: transform 0.3s ease;
-  margin:0 5%;
+  margin: 0 5%;
   border-radius: 20px;
   overflow: hidden; /* Ensure the image doesn't overflow */
 }

@@ -1,7 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CommonstateService } from '../../services/commonstate.service';
-import { Subscription } from 'rxjs';
-import {NgIf} from '@angular/common';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {CommonstateService} from '../../services/commonstate.service';
+import {Subscription} from 'rxjs';
 import {Router} from '@angular/router'; // Import Subscription to manage subscriptions
 
 @Component({
@@ -17,14 +16,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
   dropdownVisible: boolean = false;
 
   // State management for user and cart data
-  userState: { name: string; loggedIn: boolean } = { name: '', loggedIn: false };
+  userState: { name: string; loggedIn: boolean } = {name: '', loggedIn: false};
   cartData: any[] = []; // Store the cart products
   cartTotal: number = 0;
   cartItemCount: number = 10;
 
   private subscriptions: Subscription[] = []; // Array to store subscriptions
 
-  constructor(private stateService: CommonstateService,private router: Router) {}
+  constructor(private stateService: CommonstateService, private router: Router) {
+  }
 
   ngOnInit(): void {
     // Update search placeholder every 1.2 seconds
