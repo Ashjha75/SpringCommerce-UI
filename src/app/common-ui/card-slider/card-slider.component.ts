@@ -3,7 +3,6 @@ import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-card-slider',
-  standalone: true,
   templateUrl: './card-slider.component.html',
   imports: [
     NgForOf

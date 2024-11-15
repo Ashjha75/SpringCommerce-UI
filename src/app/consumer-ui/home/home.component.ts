@@ -14,15 +14,12 @@ import {FooterComponent} from '../../common-ui/footer/footer.component';
 @Component({
   selector: 'app-home',
   imports: [
-    CardSliderComponent,
-    CardComponent,
     NgForOf,
     CommonUiModule,
-    ArrowSliderComponent,
-    CartCardComponent,
     FooterComponent,
   ],
   templateUrl: './home.component.html',
+  standalone: true,
   styleUrl: './home.component.css'
 })
 export class HomeComponent {

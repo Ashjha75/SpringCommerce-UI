@@ -3,7 +3,6 @@ import { NgClass, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-card',
-  standalone: true,
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
   imports: [NgIf, NgClass]

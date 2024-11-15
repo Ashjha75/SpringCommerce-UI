@@ -4,7 +4,6 @@ import { NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
 @Component({
   selector: 'app-arrow-slider',
   templateUrl: './arrow-slider.component.html',
-  standalone: true,
   imports: [NgIf, NgForOf, NgTemplateOutlet],
   styleUrls: ['./arrow-slider.component.css'],
 })

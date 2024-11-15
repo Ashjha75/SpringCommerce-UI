@@ -5,7 +5,6 @@ import { CommonstateService } from '../../services/commonstate.service';
 
 @Component({
   selector: 'app-cart-card',
-  standalone: true,
   imports: [
     NgIf,
     NgClass,
