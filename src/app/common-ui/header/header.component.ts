@@ -7,7 +7,6 @@ import {Router} from '@angular/router'; // Import Subscription to manage subscri
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  standalone: true,
   imports: [
     NgIf
   ],

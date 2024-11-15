@@ -4,9 +4,6 @@ import {NgForOf} from '@angular/common';
 @Component({
   selector: 'app-card-slider',
   templateUrl: './card-slider.component.html',
-  imports: [
-    NgForOf
-  ],
   styleUrls: ['./card-slider.component.css']
 })
 export class CardSliderComponent implements OnInit {

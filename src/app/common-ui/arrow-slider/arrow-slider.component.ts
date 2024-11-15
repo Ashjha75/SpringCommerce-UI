@@ -4,7 +4,6 @@ import { NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
 @Component({
   selector: 'app-arrow-slider',
   templateUrl: './arrow-slider.component.html',
-  imports: [NgIf, NgForOf, NgTemplateOutlet],
   styleUrls: ['./arrow-slider.component.css'],
 })
 export class ArrowSliderComponent implements OnInit, OnDestroy {

@@ -5,12 +5,6 @@ import { CommonstateService } from '../../services/commonstate.service';
 
 @Component({
   selector: 'app-cart-card',
-  imports: [
-    NgIf,
-    NgClass,
-    ButtonComponent,
-    DecimalPipe
-  ],
   templateUrl: './cart-card.component.html',
   styleUrls: ['./cart-card.component.css']
 })

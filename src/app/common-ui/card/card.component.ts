@@ -5,7 +5,6 @@ import { NgClass, NgIf } from '@angular/common';
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
-  imports: [NgIf, NgClass]
 })
 export class CardComponent {
   @Input() settings: {
