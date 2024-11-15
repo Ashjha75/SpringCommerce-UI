@@ -13,7 +13,6 @@ import {FooterComponent} from '../../common-ui/footer/footer.component';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   imports: [
     CardSliderComponent,
     CardComponent,

@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './consumer-ui/home/home.component';
 import { NgModule } from '@angular/core';
@@ -16,7 +16,7 @@ function redirectBasedOnAuth(authService: AuthService) {
 }
 
 export const routes: Routes = [
-  { path: '123', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   // {
   //   path: 'redirect',
@@ -26,8 +26,8 @@ export const routes: Routes = [
   { path: '**', redirectTo: '' }
 ];
 
-// @NgModule({
-//   imports: [RouterModule.forRoot(routes)],
-//   exports: [RouterModule]
-// })
-// export class AppRoutingModule { }
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}

@@ -9,7 +9,6 @@ import {HomeComponent} from './consumer-ui/home/home.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [RouterOutlet, HeaderComponent, CardSliderComponent, CommonUiModule, CardComponent, NgForOf, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
